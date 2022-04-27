@@ -1,9 +1,0 @@
-Let's build a blog using Laravel and Tailwind!
-
-laravel,tailwind,php
-
-Before we jump straight in, let's answer the question I know you're burning to ask...
-
-### Wait, php?!
-
-Yes, php. No, it isn't dead!

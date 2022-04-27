@@ -16,6 +16,8 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
+
+    {{ $styles }}
 </head>
 
 <body class="font-sans antialiased bg-neutral-100 text-gray-800">
@@ -26,6 +28,8 @@
     <main class="flex flex-col items-center gap-4 p-4 mt-14">
         {{ $slot }}
     </main>
+
+    {{ $scripts }}
 </body>
 
 </html>
