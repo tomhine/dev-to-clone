@@ -1,6 +1,6 @@
 <x-app-layout :title="$post->title">
-    <div class="flex flex-col gap-2 w-full max-w-3xl">
-        <article class="bg-white rounded-xl border flex flex-col">
+    <div class="flex gap-2 w-full max-w-7xl">
+        <article class="bg-white rounded-xl border w-full max-w-3xl flex flex-col">
             @if ($post->banner_image_url)
             <img src="{{ asset('images/banners/' . $post->banner_image_url) }}" alt="" aria-hidden class="rounded-t-md">
             @endif
