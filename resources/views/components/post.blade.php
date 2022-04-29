@@ -1,5 +1,9 @@
 @props(['post', 'bannerImage' => false])
 
+@php
+$buttonText = $post->bookmarks;
+@endphp
+
 <a href="/posts/{{ $post->slug }}">
     <article class="bg-white rounded-md border focus:border-brand-purplehover focus:outline-brand-purplehover">
         @if ($bannerImage)
@@ -33,7 +37,8 @@
 
                     <div class="flex gap-2 items-center">
                         <p class="text-xs">{{ rand(1, 12) }} min read</p>
-                        <button class="px-3 py-1.5 rounded-md bg-neutral-300/80 hover:bg-neutral-300">Save</button>
+                        <button class="px-3 py-1.5 rounded-md bg-neutral-300/80 hover:bg-neutral-300">{{ $buttonText
+                            }}</button>
                     </div>
                 </div>
             </div>

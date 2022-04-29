@@ -4,6 +4,7 @@
             <aside class="flex flex-col items-center gap-[17px] w-16 fixed top-32">
                 <livewire:like-button :post='$post' />
                 <livewire:unicorn-button :post='$post' />
+                <livewire:bookmark-button :post='$post' />
             </aside>
         </div>
         <article class="bg-white rounded-xl border w-full max-w-3xl flex flex-col">

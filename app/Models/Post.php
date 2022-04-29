@@ -13,7 +13,8 @@ class Post extends Model
 
     protected $withCount = [
         'likes',
-        'unicorns'
+        'unicorns',
+        'bookmarks'
     ];
 
     public function author(): BelongsTo
@@ -29,5 +30,10 @@ class Post extends Model
     public function unicorns(): HasMany
     {
         return $this->hasMany(Unicorn::class);
+    }
+
+    public function bookmarks(): HasMany
+    {
+        return $this->hasMany(Bookmark::class);
     }
 }

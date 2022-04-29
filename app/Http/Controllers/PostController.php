@@ -16,7 +16,7 @@ class PostController extends Controller
      */
     public function index()
     {
-        $posts = Post::with(['author:id,name'])->latest()->get();
+        $posts = Post::with(['author:id,name', 'bookmarks'])->latest()->get();
 
         foreach($posts as $post) {
             $post->tags = explode(',', $post->tags);
