@@ -1,10 +1,10 @@
 <x-app-layout :title="$post->title">
     <div class="flex gap-2 w-full max-w-7xl px-4">
         <div class="w-16">
-            <aside class="flex flex-col items-center gap-[17px] w-16 fixed top-32">
+            <aside class="flex flex-col items-center gap-[17px] w-16 fixed top-[118px]">
                 <livewire:like-button :post='$post' />
                 <livewire:unicorn-button :post='$post' />
-                <livewire:bookmark-button :post='$post' />
+                <livewire:bookmark-button :post='$post' type="icon" />
             </aside>
         </div>
         <article class="bg-white rounded-xl border w-full max-w-3xl flex flex-col">
@@ -25,7 +25,7 @@
                     </ul>
                 </div>
                 <div class="prose-xl mt-6">
-                    {{ $post->content }}
+                    {!! Str::markdown($post->content) !!}
                 </div>
             </section>
         </article>

@@ -1,3 +1,5 @@
+@if ($type === 'icon')
+
 <button type="button" class="flex flex-col items-center group" wire:click="bookmarkHandler"
     x-data="{ bookmarked: @entangle('currentUserHasBookmarked')  }">
     <span class="w-10 h-10 rounded-full group-hover:bg-brand-purple/10 flex items-center justify-center"
@@ -6,3 +8,12 @@
     </span>
     <p class="text-sm">{{ $count }}</p>
 </button>
+@endif
+@if ($type === 'text')
+
+<button class="px-3 py-1.5 rounded-md bg-neutral-300/80 hover:bg-neutral-300" wire:click="bookmarkHandler"
+    x-data="{ bookmarked: @entangle('currentUserHasBookmarked') }" x-text="bookmarked ? 'Unsave' : 'Save'">
+
+</button>
+
+@endif
