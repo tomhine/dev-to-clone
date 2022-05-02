@@ -12,8 +12,9 @@ class BookmarkButton extends Component
     public Post $post;
     public int $count;
     public bool $currentUserHasBookmarked;
+    public string $type;
 
-    public function mount(Post $post)
+    public function mount(Post $post, string $type)
     {
         $this->post = $post;
         $this->count = $post->bookmarks_count;
@@ -21,6 +22,8 @@ class BookmarkButton extends Component
         if (Auth::user()) {
             $this->currentUserHasBookmarked = Bookmark::query()->where('user_id', '=', Auth::user()->id)->where('post_id', '=', $this->post->id)->exists();
         }
+
+        $this->type = $type;
     }
 
     public function bookmarkHandler()
