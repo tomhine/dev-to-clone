@@ -1,9 +1,5 @@
 @props(['post', 'bannerImage' => false])
 
-@php
-$buttonText = $post->bookmarks->count() ? 'Unsave' : 'Save';
-@endphp
-
 <article class="bg-white rounded-md border focus:border-brand-purplehover focus:outline-brand-purplehover">
     @if ($bannerImage)
     <img src="{{ asset('images/banners/' . $post->banner_image_url) }}" alt="" aria-hidden class="rounded-t-md">
@@ -30,9 +26,12 @@ $buttonText = $post->bookmarks->count() ? 'Unsave' : 'Save';
                         <x-icon.heart class="group-hover:text-black" /> {{ $post->likes_count }} Reactions
                     </span>
                     @endif
-                    <span class="flex gap-1 items-center rounded-lg px-2 py-1 hover:bg-gray-100 cursor-pointer group">
-                        <x-icon.comment class="group-hover:text-black" /> Add comment
-                    </span>
+                    <a href="/posts/{{ $post->slug }}">
+                        <span
+                            class="flex gap-1 items-center rounded-lg px-2 py-1 hover:bg-gray-100 cursor-pointer group">
+                            <x-icon.comment class="group-hover:text-black" /> Add comment
+                        </span>
+                    </a>
                 </div>
 
                 <div class="flex gap-2 items-center">
