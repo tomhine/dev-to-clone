@@ -24,7 +24,7 @@
                         @endforeach
                     </ul>
                 </div>
-                <div class="prose-xl mt-6">
+                <div class="prose mt-6">
                     {!! Str::markdown($post->content) !!}
                 </div>
             </section>
