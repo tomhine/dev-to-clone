@@ -8,12 +8,15 @@
     </span>
     <p class="text-sm">{{ $count }}</p>
 </button>
+
 @endif
+
 @if ($type === 'text')
 
-<button class="px-3 py-1.5 rounded-md bg-neutral-300/80 hover:bg-neutral-300" wire:click="bookmarkHandler"
-    x-data="{ bookmarked: @entangle('currentUserHasBookmarked') }" x-text="bookmarked ? 'Unsave' : 'Save'">
-
+<button class="px-3 py-1.5 rounded-md " wire:click="bookmarkHandler"
+    x-data="{ bookmarked: @entangle('currentUserHasBookmarked') }"
+    :class="bookmarked ? 'bg-white hover:bg-neutral-300/20' : 'bg-neutral-300/80 hover:bg-neutral-300'">
+    <span x-text="bookmarked ? 'Saved' : 'Save'"></span>
 </button>
 
 @endif
