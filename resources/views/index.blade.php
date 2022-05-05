@@ -21,6 +21,7 @@
         </aside>
         <!-- post feed -->
         <div class="lg:max-w-2xl w-full md:w-2/3 lg:w-1/2 flex flex-col gap-2">
+            <x-nav.post-feed-filters />
             @foreach ($posts as $post)
             <x-post :post="$post" bannerImage="{{ $loop->first && true }}" />
             @endforeach

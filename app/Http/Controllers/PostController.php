@@ -11,12 +11,26 @@ class PostController extends Controller
 {
     /**
      * Get all posts with the author and return the home view
-     *
-     * @return void
      */
     public function index()
     {
-        $posts = Post::with(['author:id,name', 'bookmarks'])->latest()->get();
+        // $posts = Post::with(['author:id,name', 'bookmarks'])->latest()->get();
+        $posts = Post::query()->with(['author:id,name', 'bookmarks'])->get();
+
+        foreach($posts as $post) {
+            $post->tags = explode(',', $post->tags);
+        }
+
+        return view('index', ['posts' => $posts]);
+    }
+
+    /**
+     * Get all posts {latest first} with the author and return the home view
+     */
+    public function latest()
+    {
+        // $posts = Post::with(['author:id,name', 'bookmarks'])->latest()->get();
+        $posts = Post::query()->with(['author:id,name', 'bookmarks'])->latest()->get();
 
         foreach($posts as $post) {
             $post->tags = explode(',', $post->tags);
@@ -29,7 +43,6 @@ class PostController extends Controller
      * Get a single post from the slug with the author and return the single post view
      *
      * @param Post $post
-     * @return void
      */
     public function show(Post $post)
     {
@@ -42,8 +55,6 @@ class PostController extends Controller
 
     /**
      * Get the create post view if authenticated
-     *
-     * @return void
      */
     public function create()
     {
@@ -52,8 +63,6 @@ class PostController extends Controller
 
     /**
      * Validate a created post and store in the database
-     *
-     * @return void
      */
     public function store()
     {

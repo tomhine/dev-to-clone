@@ -1,6 +1,6 @@
 @php
-$links = ['home', 'reading-list', 'listings', 'podcasts', 'videos', 'tags', 'FAQ', 'forem-shop', 'sponsors', 'about',
-'contact'];
+$links = ['home', 'reading-list', 'listings', 'podcasts', 'videos',
+'tags', 'FAQ', 'forem-shop', 'sponsors', 'about', 'contact'];
 @endphp
 
 <nav>
@@ -17,6 +17,9 @@ $links = ['home', 'reading-list', 'listings', 'podcasts', 'videos', 'tags', 'FAQ
                 <x-nav.icon :icon="$link" />
             </span>
             {{ str_replace('-', ' ', $link) }}
+            @if ($link === 'reading-list')
+            <span class="bg-neutral-300/80 px-1 rounded-md text-sm">{{ Auth::user()->bookmarks_count }}</span>
+            @endif
         </x-link.button-hover>
         @endforeach
     </ul>

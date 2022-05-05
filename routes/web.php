@@ -16,11 +16,15 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [PostController::class, 'index'])->name('home');
 
+Route::get('/latest', [PostController::class, 'latest'])->name('latest');
+
+Route::get('/top', [PostController::class, 'index'])->name('top');
+
 Route::get('/posts/{post:slug}', [PostController::class, 'show'])->name('posts.show');
 
 Route::get('/new', [PostController::class, 'create'])->middleware(['auth'])->name('posts.create');
 
-Route::post('/new', [PostController::class, 'store'])->name('posts.store');
+Route::post('/new', [PostController::class, 'store'])->middleware(['auth'])->name('posts.store');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
