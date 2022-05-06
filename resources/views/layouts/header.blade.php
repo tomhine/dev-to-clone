@@ -12,20 +12,20 @@
         <!-- header right -->
         <div class="flex items-center gap-4">
             @guest
-            <x-link.button-hover href="{{ route('login') }}">Log in</x-link.button-alt>
+            <x-link.button-hover href="{{ route('login') }}">Log in</x-link.button-hover>
 
-                <x-link.button-main href="{{ route('register') }}">Create account</x-link.button-main>
-                @endguest
-                @auth
-                <form action="/logout" method="POST">
-                    @csrf
-                    <button type="submit" class="px-4 py-2 flex gap-2 items-center rounded border border-transparent
+            <x-link.button-main href="{{ route('register') }}">Create account</x-link.button-main>
+            @endguest
+            @auth
+            <form action="/logout" method="POST">
+                @csrf
+                <button type="submit" class="px-4 py-2 flex gap-2 items-center rounded border border-transparent
                         hover:underline hover:bg-brand-purple/10 hover:text-brand-purple transition-colors">Log
-                        out</button>
-                </form>
+                    out</button>
+            </form>
 
-                <x-link.button-main href="{{ route('posts.create') }}">Create post</x-link.button-main>
-                @endauth
+            <x-link.button-main href="{{ route('posts.create') }}">Create post</x-link.button-main>
+            @endauth
         </div>
     </div>
 </header>

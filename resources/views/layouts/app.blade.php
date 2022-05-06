@@ -22,7 +22,8 @@
 
 <body class="font-sans antialiased bg-neutral-100 text-gray-800">
     {{-- @include('layouts.navigation') --}}
-    @include('layouts.header')
+    @includeUnless(Request::route()->getName() === 'posts.create', 'layouts.header')
+    @includeWhen(Request::route()->getName() === 'posts.create', 'layouts.create-header')
 
     <!-- Page Content -->
     <main class="flex flex-col items-center gap-4 p-4 mt-14">
