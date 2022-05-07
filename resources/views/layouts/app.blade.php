@@ -26,10 +26,12 @@
     @includeWhen(Request::route()->getName() === 'posts.create', 'layouts.create-header')
 
     <!-- Page Content -->
-    <main class="flex flex-col items-center gap-4 p-4 mt-14">
+    <main
+        class="flex flex-col items-center gap-4 p-4 {{ Request::route()->getName() !== 'posts.create' ? 'mt-14' : '' }}">
         {{ $slot }}
     </main>
 
+    {{ $scripts }}
     @livewireScripts
 </body>
 

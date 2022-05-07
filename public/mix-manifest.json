@@ -1,4 +1,6 @@
 {
     "/js/app.js": "/js/app.js",
+    "/js/createPostInfo.js": "/js/createPostInfo.js",
+    "/js/markdownEditor.js": "/js/markdownEditor.js",
     "/css/app.css": "/css/app.css"
 }

@@ -20,17 +20,47 @@
                 </div>
                 <!-- Content input -->
                 <div class="mt-8">
-                    <div class="w-full bg-[#f9f9f9] h-14 px-16 flex items-center justify-between">
+                    <div class="w-full bg-[#f9f9f9] h-14 px-14 flex items-center justify-between">
                         <div class="flex items-center gap-1">
-                            <x-button.hover type="button" data-markdown-button data-markdown-button-bold>
+                            <x-button.hover type="button" aria-label="bold" data-markdown-button
+                                data-markdown-button-bold>
                                 <x-icon.markdown.bold data-markdown-button data-markdown-button-bold />
                             </x-button.hover>
-                            <x-button.hover type="button" data-markdown-button data-markdown-button-italic>
+                            <x-button.hover type="button" aria-label="italic" data-markdown-button
+                                data-markdown-button-italic>
                                 <x-icon.markdown.italic />
+                            </x-button.hover>
+                            <x-button.hover type="button" aria-label="link" data-markdown-button
+                                data-markdown-button-link>
+                                <x-icon.markdown.link />
+                            </x-button.hover>
+                            <x-button.hover type="button" aria-label="ordered list" data-markdown-button
+                                data-markdown-button-ordered-list>
+                                <x-icon.markdown.ordered-list />
+                            </x-button.hover>
+                            <x-button.hover type="button" aria-label="ordered list" data-markdown-button
+                                data-markdown-button-unordered-list>
+                                <x-icon.markdown.unordered-list />
+                            </x-button.hover>
+                            <x-button.hover type="button" aria-label="heading" data-markdown-button
+                                data-markdown-button-heading>
+                                <x-icon.markdown.heading />
+                            </x-button.hover>
+                            <x-button.hover type="button" aria-label="quote" data-markdown-button
+                                data-markdown-button-quote>
+                                <x-icon.markdown.quote />
+                            </x-button.hover>
+                            <x-button.hover type="button" aria-label="code" data-markdown-button
+                                data-markdown-button-code>
+                                <x-icon.markdown.code />
+                            </x-button.hover>
+                            <x-button.hover type="button" aria-label="code block" data-markdown-button
+                                data-markdown-button-code-block>
+                                <x-icon.markdown.code-block />
                             </x-button.hover>
                         </div>
                     </div>
-                    <textarea name="content" id="content" class="px-16 resize-none w-full h-[420px]  rounded-md shadow-sm
+                    <textarea name="content" id="content" class="px-16 py-8 resize-none w-full h-[420px] text-lg font-mono rounded-md shadow-sm
                         border-none focus:ring-0" :value="old('content')" data-create-content></textarea>
                 </div>
             </section>
@@ -70,4 +100,8 @@
             </div>
         </aside>
     </form>
+    <x-slot:scripts>
+        <script src="{{ asset('js/createPostInfo.js') }}" defer></script>
+        <script src="{{ asset('js/markdownEditor.js') }}" defer></script>
+        </x-slot>
 </x-app-layout>

@@ -1,4 +1,4 @@
-<header class="w-full h-14 fixed top-0 left-0">
+<header class="w-full h-14">
     <div class="w-full max-w-7xl h-full flex items-center justify-between mx-auto px-4">
         <!-- header left -->
         <div class="flex gap-4 items-center">

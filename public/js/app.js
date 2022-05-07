@@ -5078,10 +5078,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var alpinejs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! alpinejs */ "./node_modules/alpinejs/dist/module.esm.js");
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
-__webpack_require__(/*! ./createPostInfo */ "./resources/js/createPostInfo.js");
-
-__webpack_require__(/*! ./markdownEditor */ "./resources/js/markdownEditor.js");
-
 
 window.Alpine = alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"];
 alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"].start();
@@ -5116,89 +5112,6 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 //     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
 //     forceTLS: true
 // });
-
-/***/ }),
-
-/***/ "./resources/js/createPostInfo.js":
-/*!****************************************!*\
-  !*** ./resources/js/createPostInfo.js ***!
-  \****************************************/
-/***/ (() => {
-
-var titleInput = document.querySelector("[data-create-title]");
-var titleInfo = document.querySelector("[data-info-title]");
-var tagsInput = document.querySelector("[data-create-tags]");
-var tagsInfo = document.querySelector("[data-info-tags]");
-var contentInput = document.querySelector("[data-create-content]");
-var contentInfo = document.querySelector("[data-info-content]"); // Title info toggle
-
-titleInput.addEventListener("focus", function () {
-  toggleVisible(titleInfo, "focus");
-});
-titleInput.addEventListener("blur", function () {
-  toggleVisible(titleInfo, "blur");
-}); // Tags info toggle
-
-tagsInput.addEventListener("focus", function () {
-  toggleVisible(tagsInfo, "focus");
-});
-tagsInput.addEventListener("blur", function () {
-  toggleVisible(tagsInfo, "blur");
-}); // Content info toggle
-
-contentInput.addEventListener("focus", function () {
-  toggleVisible(contentInfo, "focus");
-});
-contentInput.addEventListener("blur", function () {
-  toggleVisible(contentInfo, "blur");
-});
-
-function toggleVisible(element, event) {
-  if (event === "focus") {
-    if (element.classList.contains("hidden")) {
-      element.classList.remove("hidden");
-      element.classList.remove("-translate-y-4");
-    }
-  } else if (event === "blur") {
-    if (!element.classList.contains("hidden")) {
-      element.classList.add("hidden");
-    }
-  }
-}
-
-/***/ }),
-
-/***/ "./resources/js/markdownEditor.js":
-/*!****************************************!*\
-  !*** ./resources/js/markdownEditor.js ***!
-  \****************************************/
-/***/ (() => {
-
-var textArea = document.querySelector("[data-create-content]");
-var markdownButtons = document.querySelectorAll("[data-markdown-button]");
-markdownButtons.forEach(function (button) {
-  button.addEventListener("click", function (e) {
-    e.stopPropagation();
-    textArea.focus();
-    var start = textArea.selectionStart;
-    var end = textArea.selectionEnd;
-    var data = e.currentTarget.dataset;
-
-    if (data.markdownButtonBold) {
-      insertMarkdownElement("**", "**", start, end);
-    } else if (data.markdownButtonItalic) {
-      insertMarkdownElement("_", "_", start, end);
-    }
-  });
-});
-
-function insertMarkdownElement(prefix, suffix, start, end) {
-  var textArray = textArea.value.split("");
-  textArray.splice(start, 0, prefix);
-  textArray.splice(end + 1, 0, suffix);
-  textArea.value = textArray.join("");
-  textArea.setSelectionRange(start + prefix.length, end + suffix.length);
-}
 
 /***/ }),
 
