@@ -1,14 +1,14 @@
 <x-app-layout title="Create a post">
-    <div class="flex w-full max-w-7xl">
-        <section class="w-full pt-8 pb-2 bg-white rounded-xl border flex flex-col gap-2">
-            <form action="{{ route('posts.store') }}" method="post" class="space-y-2">
-                @csrf
+    <form action="{{ route('posts.store') }}" method="post" class="flex w-full max-w-7xl">
+        @csrf
+        <div class="w-full flex flex-col gap-2">
+            <section class="w-full pt-8 pb-2 bg-white rounded-xl h-full border flex flex-col">
                 <!-- Title input -->
                 <div class="px-16">
                     <input id="title"
                         class="block w-full outline-none border-none placeholder:text-5xl placeholder:font-bold placeholder-neutral-600 focus:ring-0 p-0 h-16"
                         type="text" name="title" :value="old('title')" placeholder="New post title here..." required
-                        autofocus data-create-title />
+                        data-create-title />
                 </div>
                 <!-- Tag input -->
                 <div class="px-16">
@@ -19,15 +19,14 @@
                 </div>
                 <!-- Content input -->
                 <div>
-
-                    <textarea name="content" id="content" class="px-16 resize-none w-full h-[480px] rounded-md shadow-sm
-                    border-none focus:ring-0" :value="old('content')" data-create-content></textarea>
+                    <textarea name="content" id="content" class="px-16 resize-none w-full h-[420px]  rounded-md shadow-sm
+                        border-none focus:ring-0" :value="old('content')" data-create-content></textarea>
                 </div>
-                <div>
-                    <x-button>Publish</x-button>
-                </div>
-            </form>
-        </section>
+            </section>
+            <div>
+                <x-button>Publish</x-button>
+            </div>
+        </div>
         <aside class="hidden md:flex flex-col w-full max-w-xs prose p-8">
             <!-- Title info -->
             <div class="hidden" data-info data-info-title>
@@ -59,5 +58,5 @@
                 </ul>
             </div>
         </aside>
-    </div>
+    </form>
 </x-app-layout>
