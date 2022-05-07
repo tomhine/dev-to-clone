@@ -5185,14 +5185,20 @@ markdownButtons.forEach(function (button) {
     var data = e.currentTarget.dataset;
 
     if (data.markdownButtonBold) {
-      var textArray = textArea.value.split("");
-      textArray.splice(start, 0, "**");
-      textArray.splice(end + 1, 0, "**");
-      textArea.value = textArray.join("");
-      textArea.setSelectionRange(start + 2, end + 2);
+      insertMarkdownElement("**", "**", start, end);
+    } else if (data.markdownButtonItalic) {
+      insertMarkdownElement("_", "_", start, end);
     }
   });
 });
+
+function insertMarkdownElement(prefix, suffix, start, end) {
+  var textArray = textArea.value.split("");
+  textArray.splice(start, 0, prefix);
+  textArray.splice(end + 1, 0, suffix);
+  textArea.value = textArray.join("");
+  textArea.setSelectionRange(start + prefix.length, end + suffix.length);
+}
 
 /***/ }),
 
