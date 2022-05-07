@@ -932,6 +932,9 @@ select {
 .prose > :where(:last-child):not(:where([class~="not-prose"] *)) {
   margin-bottom: 0;
 }
+.pointer-events-none {
+  pointer-events: none;
+}
 .fixed {
   position: fixed;
 }
@@ -996,6 +999,9 @@ select {
 .mt-14 {
   margin-top: 3.5rem;
 }
+.mt-8 {
+  margin-top: 2rem;
+}
 .block {
   display: block;
 }
@@ -1029,20 +1035,11 @@ select {
 .h-12 {
   height: 3rem;
 }
-.h-\[480px\] {
-  height: 480px;
-}
-.h-screen {
-  height: 100vh;
-}
 .h-\[420px\] {
   height: 420px;
 }
 .max-h-6 {
   max-height: 1.5rem;
-}
-.max-h-screen {
-  max-height: 100vh;
 }
 .w-5 {
   width: 1.25rem;
@@ -1064,6 +1061,9 @@ select {
 }
 .w-1\/4 {
   width: 25%;
+}
+.w-36 {
+  width: 9rem;
 }
 .w-48 {
   width: 12rem;
@@ -1154,11 +1154,6 @@ select {
   --tw-space-y-reverse: 0;
   margin-top: calc(0.25rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(0.25rem * var(--tw-space-y-reverse));
-}
-.space-y-2 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-y-reverse: 0;
-  margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
 }
 .overflow-hidden {
   overflow: hidden;
@@ -1266,6 +1261,10 @@ select {
 .bg-neutral-100 {
   --tw-bg-opacity: 1;
   background-color: rgb(245 245 245 / var(--tw-bg-opacity));
+}
+.bg-\[\#f9f9f9\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(249 249 249 / var(--tw-bg-opacity));
 }
 .bg-indigo-50 {
   --tw-bg-opacity: 1;
@@ -1403,6 +1402,9 @@ select {
 }
 .capitalize {
   text-transform: capitalize;
+}
+.italic {
+  font-style: italic;
 }
 .leading-5 {
   line-height: 1.25rem;
@@ -1568,8 +1570,8 @@ select {
 }
 @-webkit-keyframes drop-and-fade {
     0% {
-        opacity: 0.5;
-        transform: translateY(-1rem);
+        opacity: 0;
+        transform: translateY(-2rem);
     }
 
     100% {
@@ -1579,8 +1581,8 @@ select {
 }
 @keyframes drop-and-fade {
     0% {
-        opacity: 0.5;
-        transform: translateY(-1rem);
+        opacity: 0;
+        transform: translateY(-2rem);
     }
 
     100% {
@@ -1844,6 +1846,10 @@ select {
   }
 }
 @media (min-width: 768px) {
+
+  .md\:block {
+    display: block;
+  }
 
   .md\:flex {
     display: flex;

@@ -5080,6 +5080,8 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 __webpack_require__(/*! ./createPostInfo */ "./resources/js/createPostInfo.js");
 
+__webpack_require__(/*! ./markdownEditor */ "./resources/js/markdownEditor.js");
+
 
 window.Alpine = alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"];
 alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"].start();
@@ -5163,6 +5165,34 @@ function toggleVisible(element, event) {
     }
   }
 }
+
+/***/ }),
+
+/***/ "./resources/js/markdownEditor.js":
+/*!****************************************!*\
+  !*** ./resources/js/markdownEditor.js ***!
+  \****************************************/
+/***/ (() => {
+
+var textArea = document.querySelector("[data-create-content]");
+var markdownButtons = document.querySelectorAll("[data-markdown-button]");
+markdownButtons.forEach(function (button) {
+  button.addEventListener("click", function (e) {
+    e.stopPropagation();
+    textArea.focus();
+    var start = textArea.selectionStart;
+    var end = textArea.selectionEnd;
+    var data = e.currentTarget.dataset;
+
+    if (data.markdownButtonBold) {
+      var textArray = textArea.value.split("");
+      textArray.splice(start, 0, "**");
+      textArray.splice(end + 1, 0, "**");
+      textArea.value = textArray.join("");
+      textArea.setSelectionRange(start + 2, end + 2);
+    }
+  });
+});
 
 /***/ }),
 

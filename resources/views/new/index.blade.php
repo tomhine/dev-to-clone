@@ -1,6 +1,7 @@
 <x-app-layout title="Create a post">
     <form action="{{ route('posts.store') }}" method="post" class="flex w-full max-w-7xl">
         @csrf
+        <div class="hidden md:block w-36"></div>
         <div class="w-full flex flex-col gap-2">
             <section class="w-full pt-8 pb-2 bg-white rounded-xl h-full border flex flex-col">
                 <!-- Title input -->
@@ -18,7 +19,17 @@
                         data-create-tags />
                 </div>
                 <!-- Content input -->
-                <div>
+                <div class="mt-8">
+                    <div class="w-full bg-[#f9f9f9] h-14 px-16 flex items-center justify-between">
+                        <div class="flex items-center gap-1">
+                            <x-button.hover type="button" data-markdown-button data-markdown-button-bold>
+                                <x-icon.markdown.bold data-markdown-button data-markdown-button-bold />
+                            </x-button.hover>
+                            <x-button.hover type="button" data-markdown-button data-markdown-button-italic>
+                                <x-icon.markdown.italic />
+                            </x-button.hover>
+                        </div>
+                    </div>
                     <textarea name="content" id="content" class="px-16 resize-none w-full h-[420px]  rounded-md shadow-sm
                         border-none focus:ring-0" :value="old('content')" data-create-content></textarea>
                 </div>

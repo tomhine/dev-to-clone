@@ -1,5 +1,6 @@
 require("./bootstrap");
 require("./createPostInfo");
+require("./markdownEditor");
 
 import Alpine from "alpinejs";
 

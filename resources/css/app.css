@@ -4,8 +4,8 @@
 
 @keyframes drop-and-fade {
     0% {
-        opacity: 0.5;
-        transform: translateY(-1rem);
+        opacity: 0;
+        transform: translateY(-2rem);
     }
 
     100% {
