@@ -7,7 +7,7 @@
                 <!-- Title input -->
                 <div class="px-16">
                     <input id="title"
-                        class="block w-full outline-none border-none placeholder:text-5xl placeholder:font-bold placeholder-neutral-600 focus:ring-0 p-0 h-16"
+                        class="block w-full outline-none border-none text-5xl font-bold placeholder:text-5xl placeholder:font-bold placeholder-neutral-600 focus:ring-0 p-0 h-16"
                         type="text" name="title" :value="old('title')" placeholder="New post title here..." required
                         data-create-title />
                 </div>
