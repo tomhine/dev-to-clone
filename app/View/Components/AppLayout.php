@@ -11,7 +11,7 @@ class AppLayout extends Component
      *
      * @param string $title prefixed page title
      */
-    public function __construct(public string $title = '') {}
+    public function __construct(public string $title = '', public $scripts = '') {}
 
     /**
      * Get the view / contents that represents the component.
