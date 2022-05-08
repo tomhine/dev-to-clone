@@ -18,3 +18,18 @@
     animation-name: drop-and-fade;
     animation-duration: 500ms;
 }
+
+@keyframes slide-in {
+    0% {
+        transform: translateX(-225px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+[data-mobile-menu-sidedraw] {
+    animation-name: slide-in;
+    animation-duration: 150ms;
+}

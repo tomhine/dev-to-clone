@@ -38,7 +38,7 @@ class PostFactory extends Factory
      * @param integer $maxTags maximum amount of tags inclusive
      * @return string comma seperated list of tags
      */
-    private function getRandomTags(int $minTags = 2, int $maxTags = 10): string
+    private function getRandomTags(int $minTags = 1, int $maxTags = 4): string
     {
         $words = ['javascript', 'php', 'backend', 'frontend', 'html', 'css', 'tailwind', 'database', 'mysql', 'server', 'sqlite', 'vue', 'laravel', 'react', 'postgresql', 'supabase', 'solidjs', 'python'];
 

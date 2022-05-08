@@ -27,6 +27,6 @@
             @endforeach
         </div>
         <!-- right sidebar -->
-        <aside class="hidden lg:flex flex-col w-1/4 max-w-xs bg-indigo-400 rounded-lg"></aside>
+        <aside class="hidden lg:flex flex-col w-1/4 max-w-xs bg-zinc-50 border rounded-lg"></aside>
     </div>
 </x-app-layout>
