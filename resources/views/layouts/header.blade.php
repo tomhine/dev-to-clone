@@ -14,7 +14,7 @@
                 class="hidden md:flex items-center border border-gray-300 hover:border-gray-400 h-10 w-[420px] rounded-md py-[7px] pl-2"
                 data-search-bar-container>
                 <input class="w-full outline-none" name="search" placeholder="Search..." data-search-bar-input />
-                <x-button.hover type="submit" class="rounded-xl py-1.5" aria-label="search">
+                <x-button.hover type="submit" class="rounded-lg py-1.5" aria-label="search">
                     <x-icon.search />
                 </x-button.hover>
             </form>
