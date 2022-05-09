@@ -10,9 +10,10 @@
                 <x-logo />
             </a>
             <!-- Search bar -->
-            <div class="hidden md:flex items-center border border-gray-300 h-10 w-[420px] rounded-md py-[7px] pl-2">
-                <input class="w-full outline-none" placeholder="Search..." />
-                <x-button.hover type="submit" class="rounded-xl" aria-label="search">
+            <div class="hidden md:flex items-center border border-gray-300 h-10 w-[420px] rounded-md py-[7px] pl-2"
+                data-search-bar-container>
+                <input class="w-full outline-none" placeholder="Search..." data-search-bar-input />
+                <x-button.hover type="submit" class="rounded-xl py-1.5" aria-label="search">
                     <x-icon.search />
                 </x-button.hover>
             </div>
@@ -20,7 +21,7 @@
 
         <!-- header right -->
         <div class="flex items-center md:gap-4">
-            <x-link.button-hover class="flex md:hidden">
+            <x-link.button-hover class="flex md:hidden" aria-label="search">
                 <x-icon.search />
             </x-link.button-hover>
             @guest

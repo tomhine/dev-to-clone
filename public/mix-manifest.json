@@ -3,5 +3,6 @@
     "/js/createPostInfo.js": "/js/createPostInfo.js",
     "/js/markdownEditor.js": "/js/markdownEditor.js",
     "/js/mobileMenu.js": "/js/mobileMenu.js",
+    "/js/searchBarFocus.js": "/js/searchBarFocus.js",
     "/css/app.css": "/css/app.css"
 }

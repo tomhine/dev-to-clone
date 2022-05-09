@@ -29,6 +29,16 @@
     }
 }
 
+@keyframes slide-out {
+    100% {
+        transform: translateX(-225px);
+    }
+
+    0% {
+        transform: translateX(0);
+    }
+}
+
 [data-mobile-menu-sidedraw] {
     animation-name: slide-in;
     animation-duration: 150ms;

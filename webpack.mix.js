@@ -15,6 +15,7 @@ mix.js("resources/js/app.js", "public/js")
     .js("resources/js/createPostInfo.js", "public/js")
     .js("resources/js/markdownEditor.js", "public/js")
     .js("resources/js/mobileMenu.js", "public/js")
+    .js("resources/js/searchBarFocus.js", "public/js")
     .postCss("resources/css/app.css", "public/css", [
         require("postcss-import"),
         require("tailwindcss"),
