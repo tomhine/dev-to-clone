@@ -1,8 +1,8 @@
-<header class="w-full bg-white border-b h-14 shadow-sm absolute top-0 left-0 z-10">
+<header class="w-full bg-white border-b h-14 shadow-sm fixed top-0 left-0 z-10" data-header>
     <div class="w-full max-w-7xl h-full flex items-center justify-between mx-auto px-2 md:px-4">
         <!-- header left -->
         <div class="flex items-center gap-2 md:gap-4">
-            <button class="h-10 w-10 flex md:hidden items-center justify-center" data-mobile-menu-button>
+            <button class="h-10 w-10 flex md:hidden items-center justify-center" data-mobile-menu-open-button>
                 <x-icon.menu />
             </button>
 
@@ -21,8 +21,8 @@
         </div>
 
         <!-- header right -->
-        <div class="flex items-center md:gap-4">
-            <x-link.button-hover class="flex md:hidden" aria-label="search">
+        <div class="flex items-center gap-1 md:gap-4">
+            <x-link.button-hover class="flex py-2 px-2 md:hidden" aria-label="search">
                 <x-icon.search />
             </x-link.button-hover>
             @guest

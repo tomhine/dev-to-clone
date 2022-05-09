@@ -21,15 +21,20 @@
 </head>
 
 <body class="font-sans antialiased bg-neutral-100 text-gray-800">
-    <div class="absolute md:hidden z-20 bg-white h-screen w-2/3" data-mobile-menu-sidedraw></div>
+    <!-- Backdrop -->
+    <div class="hidden md:hidden absolute left-0 top-0 w-full h-full bg-black/50" data-backdrop></div>
+
+    <!-- Mobile menu -->
+    <x-mobile-menu />
 
     {{-- @include('layouts.navigation') --}}
     @includeUnless(Request::route()->getName() === 'posts.create', 'layouts.header')
     @includeWhen(Request::route()->getName() === 'posts.create', 'layouts.create-header')
 
-    <!-- Page Content -->
+    <!-- Page content -->
     <main
-        class="flex flex-col items-center gap-4 py-4 md:px-4 {{ Request::route()->getName() !== 'posts.create' ? 'mt-14' : '' }}">
+        class="flex flex-col items-center gap-4 py-4 md:px-4 {{ Request::route()->getName() !== 'posts.create' ? 'mt-14' : '' }}"
+        data-page-main>
         {{ $slot }}
     </main>
 

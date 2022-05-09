@@ -39,7 +39,12 @@
     }
 }
 
-[data-mobile-menu-sidedraw] {
+.mobile-menu {
     animation-name: slide-in;
+    animation-duration: 150ms;
+}
+
+.mobile-menu[data-closing] {
+    animation-name: slide-out;
     animation-duration: 150ms;
 }
