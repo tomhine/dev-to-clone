@@ -94,6 +94,7 @@ class PostController extends Controller
         $post->slug = Str::slug($attributes['title']);
         $post->preview = substr($attributes['content'], 0, 155);
         $post->tags = $attributes['tags'];
+        $post->banner_image_url = "post-banner-" . rand(1, 4) . '.webp';
         $post->content = $attributes['content'];
         $post->author_id = Auth::id();
 
