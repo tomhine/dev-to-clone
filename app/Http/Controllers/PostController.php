@@ -40,6 +40,23 @@ class PostController extends Controller
     }
 
     /**
+     * Get all posts with a title that maches the search term with the author and return the search view
+     */
+    public function search(Request $request)
+    {
+        $search = $request->input('search');
+
+        // $posts = Post::with(['author:id,name', 'bookmarks'])->latest()->get();
+        $posts = Post::query()->where('title', 'LIKE', "%{$search}%")->with(['author:id,name', 'bookmarks'])->get();
+
+        foreach($posts as $post) {
+            $post->tags = explode(',', $post->tags);
+        }
+
+        return view('search', ['posts' => $posts, 'searchTerm' => $search]);
+    }
+
+    /**
      * Get a single post from the slug with the author and return the single post view
      *
      * @param Post $post
