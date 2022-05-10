@@ -10,19 +10,14 @@
                 <x-logo />
             </a>
             <!-- Search bar -->
-            <form method="GET" action="{{ route('posts.search') }}"
-                class="hidden md:flex items-center border border-gray-300 hover:border-gray-400 h-10 w-[420px] rounded-md py-[7px] pl-2"
-                data-search-bar-container>
-                <input class="w-full outline-none" name="search" placeholder="Search..." data-search-bar-input />
-                <x-button.hover type="submit" class="rounded-lg py-1.5" aria-label="search">
-                    <x-icon.search />
-                </x-button.hover>
-            </form>
+            <x-search-bar class="hidden md:flex w-[420px]" />
         </div>
 
         <!-- header right -->
         <div class="flex items-center gap-1 md:gap-4">
-            <x-link.button-hover class="flex py-2 px-2 md:hidden" aria-label="search">
+            <x-link.button-hover
+                class="flex py-2 px-2 md:hidden {{ Request::route()->getName() === 'posts.search' ? 'bg-neutral-200' : '' }}"
+                aria-label="search" href="{{ route('posts.search') }}">
                 <x-icon.search />
             </x-link.button-hover>
             @guest
