@@ -3,7 +3,13 @@
         @csrf
         <div class="hidden md:block w-36"></div>
         <div class="w-full flex flex-col gap-2">
-            <section class="w-full pt-4 md:pt-8 pb-2 bg-white rounded-xl h-full border flex flex-col">
+            <section class="relative w-full pt-4 md:pt-8 pb-2 bg-white rounded-xl h-full border flex flex-col">
+                <!-- Preview -->
+                <div class="hidden absolute left-0 top-0 h-full w-full bg-white border rounded-xl z-10 px-2 py-4 md:p-16 md:pb-8"
+                    data-markdown-preview-window>
+                    <div class="prose md:prose-xl" data-markdown-preview-content></div>
+                </div>
+
                 <!-- Title input -->
                 <div class="px-2 md:px-16">
                     <input id="title"
@@ -21,7 +27,7 @@
                 <!-- Content input -->
                 <div class="mt-4 md:mt-8">
                     <div class="w-full bg-[#f9f9f9] h-16 md:h-14 md:px-14 flex items-center justify-between">
-                        <div class="overflow-x-scroll flex items-center gap-1">
+                        <div class="overflow-x-scroll md:overflow-auto flex items-center gap-1">
                             <x-button.hover type="button" aria-label="bold" data-markdown-button
                                 data-markdown-button-bold>
                                 <x-icon.markdown.bold data-markdown-button data-markdown-button-bold />
@@ -60,7 +66,7 @@
                             </x-button.hover>
                         </div>
                     </div>
-                    <textarea name="content" id="content" class="px-2 md:px-16 py-8 resize-none w-full h-[420px] text-lg font-mono rounded-md shadow-sm
+                    <textarea name="content" id="content" class="px-2 md:px-16 py-8 resize-none w-full min-h-[50vh] text-lg font-mono rounded-md shadow-sm
                         border-none focus:ring-0" :value="old('content')" placeholder="Write your post content here..."
                         data-create-content></textarea>
                 </div>
@@ -104,5 +110,6 @@
     <x-slot:scripts>
         <script src="{{ asset('js/createPostInfo.js') }}" defer></script>
         <script src="{{ asset('js/markdownEditor.js') }}" defer></script>
+        <script src="{{ asset('js/markdownPreview.js') }}" defer></script>
         </x-slot>
 </x-app-layout>

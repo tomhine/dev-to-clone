@@ -12,9 +12,9 @@
         </div>
 
         <!-- header right -->
-        <div class="flex items-center gap-2 md:pr-40">
-            <x-button.hover type="button">Edit</x-button.hover>
-            <x-button.hover type="button">Preview</x-button.hover>
+        <div class="flex items-center gap-2 md:pr-80">
+            <x-button.hover type="button" data-markdown-edit-button>Edit</x-button.hover>
+            <x-button.hover type="button" data-markdown-preview-button>Preview</x-button.hover>
         </div>
     </div>
 </header>
