@@ -2,9 +2,9 @@
     <div class="w-full max-w-7xl h-full flex items-center justify-between mx-auto px-2 md:px-4">
         <!-- header left -->
         <div class="flex items-center gap-2 md:gap-4">
-            <button class="h-10 w-10 flex md:hidden items-center justify-center" data-mobile-menu-open-button>
+            <x-button.hover class="flex md:hidden" data-mobile-menu-open-button>
                 <x-icon.menu />
-            </button>
+            </x-button.hover>
 
             <a href=" {{ route('home') }}">
                 <x-logo />
