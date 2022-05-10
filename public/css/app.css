@@ -1206,6 +1206,9 @@ select {
 .overflow-hidden {
   overflow: hidden;
 }
+.overflow-x-scroll {
+  overflow-x: scroll;
+}
 .overflow-y-scroll {
   overflow-y: scroll;
 }
@@ -1439,6 +1442,9 @@ select {
 .pr-4 {
   padding-right: 1rem;
 }
+.pt-4 {
+  padding-top: 1rem;
+}
 .text-center {
   text-align: center;
 }
@@ -1595,6 +1601,18 @@ select {
 .placeholder-neutral-600::placeholder {
   --tw-placeholder-opacity: 1;
   color: rgb(82 82 82 / var(--tw-placeholder-opacity));
+}
+.placeholder-neutral-500::-moz-placeholder {
+  --tw-placeholder-opacity: 1;
+  color: rgb(115 115 115 / var(--tw-placeholder-opacity));
+}
+.placeholder-neutral-500:-ms-input-placeholder {
+  --tw-placeholder-opacity: 1;
+  color: rgb(115 115 115 / var(--tw-placeholder-opacity));
+}
+.placeholder-neutral-500::placeholder {
+  --tw-placeholder-opacity: 1;
+  color: rgb(115 115 115 / var(--tw-placeholder-opacity));
 }
 .opacity-0 {
   opacity: 0;
@@ -1769,6 +1787,18 @@ select {
 .placeholder\:text-5xl::placeholder {
   font-size: 3rem;
   line-height: 1;
+}
+.placeholder\:text-3xl::-moz-placeholder {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+.placeholder\:text-3xl:-ms-input-placeholder {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+.placeholder\:text-3xl::placeholder {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
 }
 .placeholder\:font-bold::-moz-placeholder {
   font-weight: 700;
@@ -2009,6 +2039,10 @@ select {
 }
 @media (min-width: 768px) {
 
+  .md\:mt-8 {
+    margin-top: 2rem;
+  }
+
   .md\:block {
     display: block;
   }
@@ -2023,6 +2057,10 @@ select {
 
   .md\:hidden {
     display: none;
+  }
+
+  .md\:h-14 {
+    height: 3.5rem;
   }
 
   .md\:w-2\/3 {
@@ -2065,8 +2103,62 @@ select {
     padding-right: 0px;
   }
 
+  .md\:px-14 {
+    padding-left: 3.5rem;
+    padding-right: 3.5rem;
+  }
+
+  .md\:px-16 {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+
   .md\:pl-6 {
     padding-left: 1.5rem;
+  }
+
+  .md\:pr-40 {
+    padding-right: 10rem;
+  }
+
+  .md\:pt-8 {
+    padding-top: 2rem;
+  }
+
+  .md\:text-5xl {
+    font-size: 3rem;
+    line-height: 1;
+  }
+
+  .md\:font-bold {
+    font-weight: 700;
+  }
+
+  .md\:placeholder\:text-5xl::-moz-placeholder {
+    font-size: 3rem;
+    line-height: 1;
+  }
+
+  .md\:placeholder\:text-5xl:-ms-input-placeholder {
+    font-size: 3rem;
+    line-height: 1;
+  }
+
+  .md\:placeholder\:text-5xl::placeholder {
+    font-size: 3rem;
+    line-height: 1;
+  }
+
+  .md\:placeholder\:font-bold::-moz-placeholder {
+    font-weight: 700;
+  }
+
+  .md\:placeholder\:font-bold:-ms-input-placeholder {
+    font-weight: 700;
+  }
+
+  .md\:placeholder\:font-bold::placeholder {
+    font-weight: 700;
   }
 }
 @media (min-width: 1024px) {

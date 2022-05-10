@@ -6,13 +6,13 @@
                 <x-logo />
             </a>
 
-            <div>
+            <div class="hidden md:block">
                 <h1>Create Post</h1>
             </div>
         </div>
 
         <!-- header right -->
-        <div class="flex items-center gap-2 pr-40">
+        <div class="flex items-center gap-2 md:pr-40">
             <x-button.hover type="button">Edit</x-button.hover>
             <x-button.hover type="button">Preview</x-button.hover>
         </div>

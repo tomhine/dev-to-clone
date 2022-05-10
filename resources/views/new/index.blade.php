@@ -3,25 +3,25 @@
         @csrf
         <div class="hidden md:block w-36"></div>
         <div class="w-full flex flex-col gap-2">
-            <section class="w-full pt-8 pb-2 bg-white rounded-xl h-full border flex flex-col">
+            <section class="w-full pt-4 md:pt-8 pb-2 bg-white rounded-xl h-full border flex flex-col">
                 <!-- Title input -->
-                <div class="px-16">
+                <div class="px-2 md:px-16">
                     <input id="title"
-                        class="block w-full outline-none border-none text-5xl font-bold placeholder:text-5xl placeholder:font-bold placeholder-neutral-600 focus:ring-0 p-0 h-16"
+                        class="block w-full outline-none border-none text-3xl md:text-5xl font-bold placeholder:text-3xl md:placeholder:text-5xl placeholder:font-bold placeholder-neutral-500 focus:ring-0 p-0 h-16"
                         type="text" name="title" :value="old('title')" placeholder="New post title here..." required
                         data-create-title />
                 </div>
                 <!-- Tag input -->
-                <div class="px-16">
+                <div class="px-2 md:px-16">
                     <input id="tags"
-                        class="block w-full outline-none border-none placeholder-neutral-600 focus:ring-0 p-0 h-12"
+                        class="block w-full outline-none border-none placeholder-neutral-500 focus:ring-0 p-0 h-12"
                         placeholder="Add up to 4 tags..." type="text" name="tags" :value="old('tags')"
                         data-create-tags />
                 </div>
                 <!-- Content input -->
-                <div class="mt-8">
-                    <div class="w-full bg-[#f9f9f9] h-14 px-14 flex items-center justify-between">
-                        <div class="flex items-center gap-1">
+                <div class="mt-4 md:mt-8">
+                    <div class="w-full bg-[#f9f9f9] h-16 md:h-14 md:px-14 flex items-center justify-between">
+                        <div class="overflow-x-scroll flex items-center gap-1">
                             <x-button.hover type="button" aria-label="bold" data-markdown-button
                                 data-markdown-button-bold>
                                 <x-icon.markdown.bold data-markdown-button data-markdown-button-bold />
@@ -60,11 +60,12 @@
                             </x-button.hover>
                         </div>
                     </div>
-                    <textarea name="content" id="content" class="px-16 py-8 resize-none w-full h-[420px] text-lg font-mono rounded-md shadow-sm
-                        border-none focus:ring-0" :value="old('content')" data-create-content></textarea>
+                    <textarea name="content" id="content" class="px-2 md:px-16 py-8 resize-none w-full h-[420px] text-lg font-mono rounded-md shadow-sm
+                        border-none focus:ring-0" :value="old('content')" placeholder="Write your post content here..."
+                        data-create-content></textarea>
                 </div>
             </section>
-            <div>
+            <div class="px-2 md:px-0">
                 <x-button>Publish</x-button>
             </div>
         </div>
