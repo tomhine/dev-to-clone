@@ -31,9 +31,8 @@
             </x-link.button-main>
 
             <div x-data="{ open: false }" class="md:relative">
-                <button type="button" class="h-10 w-10 rounded-full hover:bg-brand-purple/5 p-1">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-                        alt="user avatar" class="rounded-full" @click="open = !open">
+                <button type="button" class="h-10 w-10 rounded-full hover:bg-brand-purple/5 p-1" @click="open = !open">
+                    <img src="{{ asset('images/avatar.png') }}" alt="user avatar" class="rounded-full" />
                 </button>
                 <div x-show="open" style="display: none"
                     class="absolute left-2 md:-left-64 right-2 md:right-0 md:top-16 p-2 bg-white rounded-lg border space-y-2 divide-y-2 shadow-lg"
