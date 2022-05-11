@@ -25,14 +25,8 @@
 
             <x-link.button-main href="{{ route('register') }}">Create account</x-link.button-main>
             @endguest
-            @auth
-            <form action="/logout" method="POST">
-                @csrf
-                <button type="submit" class="hidden px-4 py-2 md:flex gap-2 items-center rounded border border-transparent
-                        hover:underline hover:bg-brand-purple/10 hover:text-brand-purple transition-colors">Log
-                    out</button>
-            </form>
 
+            @auth
             <x-link.button-main href="{{ route('posts.create') }}" class="hidden md:inline">Create post
             </x-link.button-main>
 
@@ -42,19 +36,23 @@
                         alt="user avatar" class="rounded-full" @click="open = !open">
                 </button>
                 <div x-show="open" style="display: none"
-                    class="absolute left-2 right-2 top-16 p-2 bg-white rounded-md border space-y-4 divide-y-2 shadow-lg"
+                    class="absolute left-2 md:-left-64 right-2 md:right-0 md:top-16 p-2 bg-white rounded-lg border space-y-2 divide-y-2 shadow-lg"
                     @click.outside="open = false">
-                    <div class="px-4 py-2">
-                        <p>Tom Hine</p>
-                        <small class="text-sm text-gray-500">@@tomhine</small>
+                    <div class="pt-2">
+                        <x-link.button-hover class="grid grid-rows-2 gap-0 px-4 py-2 group">
+                            <p>{{ Auth::user()->name }}</p>
+                            <small class="text-sm text-gray-500 group-hover:text-brand-purple"><span>@</span>{{
+                                str_replace(' ', '',
+                                strtolower(Auth::user()->name)) }}</small>
+                        </x-link.button-hover>
                     </div>
-                    <div class="py-1">
+                    <div class="pt-2">
                         <x-link.button-hover href="{{ route('dashboard') }}">Dashboard</x-link.button-hover>
                         <x-link.button-hover href="{{ route('posts.create') }}">Create Post</x-link.button-hover>
                         <x-link.button-hover href="#">Reading list</x-link.button-hover>
                         <x-link.button-hover href="#">Settings</x-link.button-hover>
                     </div>
-                    <div class="py-1">
+                    <div class="pt-2">
                         <form action="/logout" method="POST">
                             @csrf
                             <x-button.hover type="submit" class="px-4 w-full">Sign out</x-button.hover>
