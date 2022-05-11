@@ -1,5 +1,6 @@
 <x-app-layout title="Create a post">
-    <form action="{{ route('posts.store') }}" method="post" class="flex w-full max-w-7xl">
+    <form action="{{ route('posts.store') }}" method="post" class="flex w-full max-w-7xl" enctype="multipart/form-data"
+        accept=".png, .jpg, .jpeg, .webp">
         @csrf
         <div class="hidden md:block w-36"></div>
         <div class="w-full flex flex-col gap-2">
@@ -8,6 +9,20 @@
                 <div class="hidden absolute left-0 top-0 h-full w-full bg-white border rounded-xl z-10 px-2 py-4 md:p-16 md:pb-8"
                     data-markdown-preview-window>
                     <div class="prose md:prose-xl" data-markdown-preview-content></div>
+                </div>
+
+                <!-- Image upload -->
+                <div class="px-2 md:px-16 my-4 flex items-center gap-4">
+                    <div class="hidden transition w-64" data-upload-image-preview></div>
+                    <label for="image"
+                        class="ring-2 ring-gray-300 active:ring-gray-400 shadow active:shadow-md active:bg-gray-100 px-4 py-2 rounded-md cursor-pointer"
+                        data-banner-image-label>
+                        Add a cover image
+                        <input type="file" name="image" id="image"
+                            class="absolute -left-[10000px] overflow-hidden h-1 w-1" data-banner-image-input>
+                    </label>
+                    <button class="hidden px-4 py-2 text-red-500 hover:bg-neutral-100 rounded-md"
+                        data-banner-image-remove>Remove</button>
                 </div>
 
                 <!-- Title input -->

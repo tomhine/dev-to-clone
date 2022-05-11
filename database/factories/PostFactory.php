@@ -22,7 +22,6 @@ class PostFactory extends Factory
         return [
             'title' => $title,
             'slug' => Str::slug($title),
-            'preview' => $this->faker->sentence(12),
             'tags' => $this->getRandomTags(),
             'content' => $this->faker->text(rand(1000, 5000)),
             'banner_image_url' => "post-banner-" . rand(1, 4) . '.webp',

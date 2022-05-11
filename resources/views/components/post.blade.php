@@ -2,7 +2,7 @@
 
 <article
     class="bg-white md:rounded-md border-y md:border focus:border-brand-purplehover focus:outline-brand-purplehover">
-    @if ($bannerImage)
+    @if ($bannerImage && $post->banner_image_url)
     <img src="{{ asset('images/banners/' . $post->banner_image_url) }}" alt="" aria-hidden class="md:rounded-t-md">
     @endif
     <div class="px-6 py-4 flex flex-col gap-2">

@@ -87,16 +87,22 @@ class PostController extends Controller
             'title' => ['required', 'max:255'],
             'tags' => ['regex:/[A-Za-z,]+/', 'max:255'],
             'content' => ['required'],
+            'image' => ['image'],
         ]);
 
         $post = new Post();
         $post->title = $attributes['title'];
         $post->slug = Str::slug($attributes['title']);
-        $post->preview = substr($attributes['content'], 0, 155);
         $post->tags = $attributes['tags'];
-        $post->banner_image_url = "post-banner-" . rand(1, 4) . '.webp';
         $post->content = $attributes['content'];
         $post->author_id = Auth::id();
+
+        if ($attributes['image']) {
+            $image = $attributes['image'];
+            $filename= date('YmdHi').$image->getClientOriginalName();
+            $image->move(public_path('images/banners'), $filename);
+            $post->banner_image_url = $filename;
+        }
 
         $post->save();
 

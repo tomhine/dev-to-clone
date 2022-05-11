@@ -17,7 +17,6 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->string('slug')->unique();
-            $table->string('preview');
             $table->string('tags')->nullable();
             $table->text('content');
             $table->string('banner_image_url')->nullable();
