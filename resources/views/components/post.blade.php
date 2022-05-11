@@ -6,9 +6,12 @@
     <img src="{{ asset('images/banners/' . $post->banner_image_url) }}" alt="" aria-hidden class="md:rounded-t-md">
     @endif
     <div class="px-6 py-4 flex flex-col gap-2">
-        <div class="text-xs text-gray-500">
-            <p>{{ $post->author->name }}</p>
-            <time>{{ $post->created_at->format('F d') }} ({{ $post->created_at->diffForHumans() }})</time>
+        <div class="text-xs text-gray-500 flex items-center gap-2">
+            <img src="{{ asset('images/avatar.png') }}" alt="user avatar" class="rounded-full h-8 w-8" />
+            <div>
+                <p>{{ $post->author->name }}</p>
+                <time>{{ $post->created_at->format('F d') }} ({{ $post->created_at->diffForHumans() }})</time>
+            </div>
         </div>
         <div class="flex flex-col md:gap-2 md:pl-6">
             <a href="/posts/{{ $post->slug }}">
