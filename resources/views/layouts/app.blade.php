@@ -40,7 +40,7 @@
 
     {{ $scripts }}
     <script src="{{ asset('js/mobileMenu.js') }}"></script>
-    <script src="{{ asset('js/searchBarFocus.js') }}"></script>
+    {{-- <script src="{{ asset('js/searchBarFocus.js') }}"></script> --}}
     @livewireScripts
 </body>
 
