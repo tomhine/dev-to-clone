@@ -24,7 +24,7 @@ class PostFactory extends Factory
             'slug' => Str::slug($title),
             'tags' => $this->getRandomTags(),
             'content' => $this->faker->text(rand(1000, 5000)),
-            'banner_image_url' => "post-banner-" . rand(1, 4) . '.webp',
+            'banner_image_url' => "post-banner-" . rand(1, 5) . '.webp',
             'author_id' => rand(1, 10),
             'created_at' => $this->faker->dateTimeBetween('-30 days'),
         ];
