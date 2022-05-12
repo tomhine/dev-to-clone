@@ -43,22 +43,20 @@
                 </div>
                 <x-button.hover class="justify-center">Follow</x-button.hover>
                 <div>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt autem deleniti excepturi maxime
-                        sint fugit blanditiis possimus laudantium, quisquam perferendis facilis ipsa. Maxime distinctio
-                        libero quod autem ratione, minus delectus?</p>
+                    <p>{{ $post->author->bio }}</p>
                 </div>
                 <div class="space-y-4">
                     <div>
                         <h3 class="uppercase text-gray-700 font-bold text-xs">Location</h3>
-                        <address class="not-italic">Manchester, UK</address>
+                        <address class="not-italic capitalize">{{ $post->author->location }}</address>
                     </div>
                     <div>
                         <h3 class="uppercase text-gray-700 font-bold text-xs">Work</h3>
-                        <p class="not-italic">Frontend Dev</p>
+                        <p class="not-italic capitalize">{{ $post->author->work }}</p>
                     </div>
                     <div>
                         <h3 class="uppercase text-gray-700 font-bold text-xs">Joined</h3>
-                        <p class="not-italic">{{ $post->author->created_at->format('d F Y') }}</p>
+                        <p class="not-italic">{{ $post->author->created_at->format('d F y') }}</p>
                     </div>
                 </div>
             </x-side-card>
