@@ -11,10 +11,13 @@
             @if ($post->banner_image_url)
             <img src="{{ asset('images/banners/' . $post->banner_image_url) }}" alt="" aria-hidden class="rounded-t-md">
             @endif
-            <section class="pl-16 pr-12 py-8 flex flex-col gap-2">
-                <div>
-                    <p>{{ $post->author->name }}</p>
-                    <time class="text-xs text-gray-500">Posted on {{ $post->created_at->format('d F') }}</time>
+            <section class="pl-16 pr-12 py-8 flex flex-col gap-4">
+                <div class="flex items-center gap-4">
+                    <img src="{{ asset('images/avatar.png') }}" alt="user avatar" class="rounded-full h-10 w-10" />
+                    <div>
+                        <p class="font-bold -mb-2">{{ $post->author->name }}</p>
+                        <time class="text-xs text-gray-500">Posted on {{ $post->created_at->format('d F') }}</time>
+                    </div>
                 </div>
                 <div>
                     <h2 class="text-4xl font-bold">{{ $post->title }}</h2>
