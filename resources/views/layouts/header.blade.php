@@ -32,11 +32,11 @@
 
             <div x-data="{ open: false }" class="md:relative">
                 <button type="button" class="h-10 w-10 rounded-full hover:bg-brand-purple/5 p-1" @click="open = !open">
-                    <img src="{{ Auth::user()->profile_image ? asset(" images/avatars/" . Auth::user()->profile_image)
-                    : asset('images/avatar.png') }}" alt="user avatar" class="rounded-full" />
+                    <img src="{{ asset('images/avatars/' . Auth::user()->profile_image) }}" alt="user avatar"
+                        class="rounded-full h-full w-full object-fill" />
                 </button>
                 <div x-show="open" style="display: none"
-                    class="absolute left-2 md:-left-64 right-2 md:right-0 md:top-16 p-2 bg-white rounded-lg border space-y-2 divide-y-2 shadow-lg"
+                    class="absolute left-2 md:-left-64 right-2 md:right-0 md:top-11 p-2 bg-white rounded-lg border space-y-2 divide-y-2 shadow-lg"
                     @click.outside="open = false">
                     <div class="pt-2">
                         <x-link.button-hover class="grid grid-rows-2 gap-0 px-4 py-2 group">

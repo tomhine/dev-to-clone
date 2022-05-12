@@ -6,11 +6,11 @@ const menuSidedraw = document.querySelector("[data-mobile-menu-sidedraw]");
 const header = document.querySelector("[data-header]");
 const backdrop = document.querySelector("[data-backdrop]");
 
-menuOpenButton.addEventListener("click", openMobileMenu);
+menuOpenButton?.addEventListener("click", openMobileMenu);
 
-menuCloseButton.addEventListener("click", closeMobileMenu);
+menuCloseButton?.addEventListener("click", closeMobileMenu);
 
-backdrop.addEventListener("click", closeMobileMenu);
+backdrop?.addEventListener("click", closeMobileMenu);
 
 function openMobileMenu() {
     document.body.classList.add("overflow-hidden");

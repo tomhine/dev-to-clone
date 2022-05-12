@@ -3,12 +3,12 @@ const removeButton = document.querySelector("[data-banner-image-remove]");
 const imageLabel = document.querySelector("[data-banner-image-label]");
 const imagePreview = document.querySelector("[data-upload-image-preview]");
 
-imageInput.addEventListener("change", () => {
+imageInput?.addEventListener("change", () => {
     getImageData();
     imageLabel.innerText = "Change";
 });
 
-removeButton.addEventListener("click", () => {
+removeButton?.addEventListener("click", () => {
     imageInput.value = null;
     removeButton.classList.add("hidden");
     imagePreview.classList.add("hidden");

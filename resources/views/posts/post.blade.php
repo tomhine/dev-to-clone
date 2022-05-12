@@ -13,7 +13,7 @@
             @endif
             <section class="pl-16 pr-12 py-8 flex flex-col gap-4">
                 <div class="flex items-center gap-4">
-                    <img src="{{ $post->author->profile_image ? asset(" images/avatars/{$post->author->profile_image}")
+                    <img src="{{ $post->author->profile_image ? asset('images/avatars/' . $post->author->profile_image)
                     : asset('images/avatar.png') }}" alt="user avatar" class="rounded-full h-10 w-10" />
                     <div>
                         <p class="font-bold -mb-2">{{ $post->author->name }}</p>
@@ -37,7 +37,7 @@
             <x-side-card
                 class="border-t-[32px] border-t-gray-900 max-w-[260px] xl:max-w-[345px] fixed top-[73px] gap-6">
                 <div class="flex gap-4 -mt-8">
-                    <img src="{{ $post->author->profile_image ? asset(" images/avatars/{$post->author->profile_image}")
+                    <img src="{{ $post->author->profile_image ? asset('images/avatars/' . $post->author->profile_image)
                     : asset('images/avatar.png') }}" alt="user avatar" class="h-12 w-12 rounded-full">
                     <h2 class="self-end font-bold text-xl text-gray-700">{{ $post->author->name }}</h2>
                 </div>

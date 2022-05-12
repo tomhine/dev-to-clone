@@ -7,11 +7,11 @@ var imageInput = document.querySelector("[data-banner-image-input]");
 var removeButton = document.querySelector("[data-banner-image-remove]");
 var imageLabel = document.querySelector("[data-banner-image-label]");
 var imagePreview = document.querySelector("[data-upload-image-preview]");
-imageInput.addEventListener("change", function () {
+imageInput === null || imageInput === void 0 ? void 0 : imageInput.addEventListener("change", function () {
   getImageData();
   imageLabel.innerText = "Change";
 });
-removeButton.addEventListener("click", function () {
+removeButton === null || removeButton === void 0 ? void 0 : removeButton.addEventListener("click", function () {
   imageInput.value = null;
   removeButton.classList.add("hidden");
   imagePreview.classList.add("hidden");

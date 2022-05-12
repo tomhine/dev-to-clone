@@ -14,11 +14,11 @@
                 <!-- Image upload -->
                 <div class="px-2 md:px-16 my-4 flex items-center gap-4">
                     <div class="hidden transition w-64" data-upload-image-preview></div>
-                    <label for="image"
+                    <label for="banner_image"
                         class="ring-2 ring-gray-300 active:ring-gray-400 shadow active:shadow-md active:bg-gray-100 px-4 py-2 rounded-md cursor-pointer"
                         data-banner-image-label>
                         Add a cover image
-                        <input type="file" name="image" id="image"
+                        <input type="file" name="banner_image" id="banner_image"
                             class="absolute -left-[10000px] overflow-hidden h-1 w-1" data-banner-image-input>
                     </label>
                     <button class="hidden px-4 py-2 text-red-500 hover:bg-neutral-100 rounded-md"

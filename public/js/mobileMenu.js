@@ -8,9 +8,9 @@ var menuCloseButton = document.querySelector("[data-mobile-menu-close-button]");
 var menuSidedraw = document.querySelector("[data-mobile-menu-sidedraw]");
 var header = document.querySelector("[data-header]");
 var backdrop = document.querySelector("[data-backdrop]");
-menuOpenButton.addEventListener("click", openMobileMenu);
-menuCloseButton.addEventListener("click", closeMobileMenu);
-backdrop.addEventListener("click", closeMobileMenu);
+menuOpenButton === null || menuOpenButton === void 0 ? void 0 : menuOpenButton.addEventListener("click", openMobileMenu);
+menuCloseButton === null || menuCloseButton === void 0 ? void 0 : menuCloseButton.addEventListener("click", closeMobileMenu);
+backdrop === null || backdrop === void 0 ? void 0 : backdrop.addEventListener("click", closeMobileMenu);
 
 function openMobileMenu() {
   document.body.classList.add("overflow-hidden");

@@ -81,13 +81,13 @@ class PostController extends Controller
     /**
      * Validate a created post and store in the database
      */
-    public function store()
+    public function store(Request $request)
     {
-        $attributes = request()->validate([
+        $attributes = $request->validate([
             'title' => ['required', 'max:255'],
             'tags' => ['regex:/[A-Za-z,]+/', 'max:255'],
             'content' => ['required'],
-            'image' => ['image'],
+            'banner_image' => ['image'],
         ]);
 
         $post = new Post();
@@ -97,9 +97,9 @@ class PostController extends Controller
         $post->content = $attributes['content'];
         $post->author_id = Auth::id();
 
-        if ($attributes['image']) {
-            $image = $attributes['image'];
-            $filename= date('YmdHi').$image->getClientOriginalName();
+        if ($request->hasFile('banner_image')) {
+            $image = $request->file('banner_image');
+            $filename= time() . $image->getClientOriginalName();
             $image->move(public_path('images/banners'), $filename);
             $post->banner_image_url = $filename;
         }
