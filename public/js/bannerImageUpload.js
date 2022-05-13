@@ -3,33 +3,16 @@ var __webpack_exports__ = {};
 /*!*******************************************!*\
   !*** ./resources/js/bannerImageUpload.js ***!
   \*******************************************/
-var imageInput = document.querySelector("[data-banner-image-input]");
-var removeButton = document.querySelector("[data-banner-image-remove]");
-var imageLabel = document.querySelector("[data-banner-image-label]");
-var imagePreview = document.querySelector("[data-upload-image-preview]");
-imageInput === null || imageInput === void 0 ? void 0 : imageInput.addEventListener("change", function () {
-  getImageData();
-  imageLabel.innerText = "Change";
+var label = document.querySelector("[data-banner-image-upload-label]"),
+    input = document.querySelector("[data-banner-image-upload-input]"),
+    remove = document.querySelector("[data-banner-image-upload-remove]");
+input === null || input === void 0 ? void 0 : input.addEventListener("change", function () {
+  remove.classList.remove("hidden");
+  label.innerText = "Change";
 });
-removeButton === null || removeButton === void 0 ? void 0 : removeButton.addEventListener("click", function () {
-  imageInput.value = null;
-  removeButton.classList.add("hidden");
-  imagePreview.classList.add("hidden");
-  imageLabel.innerText = "Add a cover image";
+remove === null || remove === void 0 ? void 0 : remove.addEventListener("click", function () {
+  remove.classList.add("hidden");
+  label.innerText = "Add a cover image";
 });
-
-function getImageData() {
-  var file = imageInput.files[0];
-
-  if (file) {
-    var fileReader = new FileReader();
-    fileReader.readAsDataURL(file);
-    fileReader.addEventListener("load", function () {
-      imagePreview.classList.remove("hidden");
-      removeButton.classList.remove("hidden");
-      imagePreview.innerHTML = '<img src="' + this.result + '" alt="post cover" class="rounded-md" />';
-    });
-  }
-}
 /******/ })()
 ;

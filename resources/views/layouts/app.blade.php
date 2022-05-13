@@ -14,6 +14,12 @@
     <!-- Styles -->
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 
+    <style>
+        [x-cloak] {
+            display: none;
+        }
+    </style>
+
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
 
