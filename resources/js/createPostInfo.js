@@ -28,7 +28,8 @@ contentInput.addEventListener("focus", () => {
     toggleVisible(contentInfo, "focus");
 });
 
-contentInput.addEventListener("blur", () => {
+contentInput.addEventListener("blur", (e) => {
+    if (e.relatedTarget?.dataset.markdownButton) return;
     toggleVisible(contentInfo, "blur");
 });
 

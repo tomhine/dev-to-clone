@@ -27,7 +27,10 @@ tagsInput.addEventListener("blur", function () {
 contentInput.addEventListener("focus", function () {
   toggleVisible(contentInfo, "focus");
 });
-contentInput.addEventListener("blur", function () {
+contentInput.addEventListener("blur", function (e) {
+  var _e$relatedTarget;
+
+  if ((_e$relatedTarget = e.relatedTarget) !== null && _e$relatedTarget !== void 0 && _e$relatedTarget.dataset.markdownButton) return;
   toggleVisible(contentInfo, "blur");
 });
 
