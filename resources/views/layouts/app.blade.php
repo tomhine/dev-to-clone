@@ -44,7 +44,7 @@
         {{ $slot }}
     </main>
 
-    @includeUnless(Request::route()->getName === 'posts.create' ,'layouts.footer')
+    @includeUnless(Request::route()->getName() === 'posts.create' ,'layouts.footer')
 
     {{ $scripts }}
     <script src="{{ asset('js/mobileMenu.js') }}"></script>
