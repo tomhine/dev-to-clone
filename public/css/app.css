@@ -985,6 +985,10 @@ select {
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
+.my-10 {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+}
 .ml-3 {
   margin-left: 0.75rem;
 }
@@ -1051,6 +1055,18 @@ select {
 .-mt-6 {
   margin-top: -1.5rem;
 }
+.mt-10 {
+  margin-top: 2.5rem;
+}
+.mb-10 {
+  margin-bottom: 2.5rem;
+}
+.ml-8 {
+  margin-left: 2rem;
+}
+.ml-6 {
+  margin-left: 1.5rem;
+}
 .block {
   display: block;
 }
@@ -1098,6 +1114,9 @@ select {
 }
 .h-\[350px\] {
   height: 350px;
+}
+.h-\[2px\] {
+  height: 2px;
 }
 .max-h-6 {
   max-height: 1.5rem;
@@ -1471,6 +1490,9 @@ select {
   --tw-bg-opacity: 1;
   background-color: rgb(54 55 124 / var(--tw-bg-opacity));
 }
+.bg-gray-800\/10 {
+  background-color: rgb(31 41 55 / 0.1);
+}
 .object-fill {
   -o-object-fit: fill;
      object-fit: fill;
@@ -1557,6 +1579,14 @@ select {
 .py-6 {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
+}
+.py-10 {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+.py-5 {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
 }
 .pt-8 {
   padding-top: 2rem;
