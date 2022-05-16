@@ -36,14 +36,14 @@
                 </label>
             </div>
 
-            <div class="w-full flex flex-col gap-4 items-center mt-4">
+            <div class="w-full flex flex-col gap-8 items-center mt-4">
                 <x-button class="w-full">
                     {{ __('Continue') }}
                 </x-button>
                 @if (Route::has('password.request'))
-                <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('password.request') }}">
+                <x-link.a class="text-sm" href="{{ route('password.request') }}">
                     {{ __('I forgot my password') }}
-                </a>
+                </x-link.a>
                 @endif
             </div>
 

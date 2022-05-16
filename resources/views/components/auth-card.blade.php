@@ -1,8 +1,13 @@
-<div class="w-full sm:max-w-md mt-6 px-6 py-4 bg-white shadow-md overflow-hidden sm:rounded-lg flex flex-col gap-4">
+<div class="w-full sm:max-w-xl p-12 -mt-4 sm:-mt-2 bg-white border overflow-hidden sm:rounded-lg flex flex-col gap-4">
 
-    <div class="py-4">
-        <h2 class="text-2xl font-bold">Welcome to the BLOG community</h2>
-    </div>
+    <section class="text-center py-6">
+        <div>
+            <h2 class="text-3xl font-bold">Welcome to DEV community</h2>
+        </div>
+        <p>
+            <x-link.a href="{{ route('home') }}">DEV Community</x-link.a> is a community of 846,223 amazing developers
+        </p>
+    </section>
 
     {{ $slot }}
 </div>

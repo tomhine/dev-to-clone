@@ -30,6 +30,10 @@
             <x-link.button-main href="{{ route('posts.create') }}" class="hidden md:inline">Create post
             </x-link.button-main>
 
+            <x-link.button-hover href="#" class="px-2">
+                <x-icon.bell />
+            </x-link.button-hover>
+
             <div x-data="{ open: false }" class="md:relative">
                 <button type="button" class="h-10 w-10 rounded-full hover:bg-brand-purple/5 p-1" @click="open = !open">
                     <img src="{{ Auth::user()->profile_image ? asset('images/avatars/' . Auth::user()->profile_image) : asset('images/avatar.png') }}"
