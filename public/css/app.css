@@ -1045,6 +1045,18 @@ select {
 .-mt-4 {
   margin-top: -1rem;
 }
+.mb-16 {
+  margin-bottom: 4rem;
+}
+.mb-24 {
+  margin-bottom: 6rem;
+}
+.mb-32 {
+  margin-bottom: 8rem;
+}
+.mb-36 {
+  margin-bottom: 9rem;
+}
 .block {
   display: block;
 }
