@@ -28,6 +28,10 @@ Route::post('/new', [PostController::class, 'store'])->middleware(['auth'])->nam
 
 Route::get('/search', [PostController::class, 'search'])->name('posts.search');
 
+Route::get('/about', function () {
+    return view('about');
+})->name('about');
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
