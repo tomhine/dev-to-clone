@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BookmarkController;
 use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
 
@@ -27,6 +28,8 @@ Route::get('/new', [PostController::class, 'create'])->middleware(['auth'])->nam
 Route::post('/new', [PostController::class, 'store'])->middleware(['auth'])->name('posts.store');
 
 Route::get('/search', [PostController::class, 'search'])->name('posts.search');
+
+Route::get('/reading-list', [BookmarkController::class, 'index'])->middleware(['auth'])->name('bookmarks.index');
 
 Route::get('/about', function () {
     return view('about');

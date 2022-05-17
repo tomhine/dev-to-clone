@@ -8,6 +8,9 @@
 
     <title>{{ $title ? $title . ' - ' : '' }} DEV Community 💻🖥</title>
 
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{{ asset('images/favicon.webp') }}" type="image/x-icon">
+
     <!-- Styles -->
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 
@@ -23,7 +26,7 @@
     @livewireStyles
 </head>
 
-<body class="font-sans antialiased bg-neutral-100 text-gray-800">
+<body class="font-sans antialiased bg-neutral-100 text-gray-700">
     <!-- Backdrop -->
     <div class="hidden md:hidden absolute left-0 top-0 w-screen h-screen bg-[#090909]/50" data-backdrop></div>
 
