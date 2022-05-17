@@ -40,6 +40,10 @@ Route::get('/sponsors', function () {
     return view('sponsors');
 })->name('sponsors');
 
+Route::get('/code-of-conduct', function () {
+    return view('code-of-conduct');
+})->name('code-of-conduct');
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');

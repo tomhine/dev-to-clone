@@ -1,7 +1,7 @@
 <x-app-layout>
-    <x-article-wrapper>
-        <section class="space-y-6">
-            <h1 class="text-5xl font-extrabold">About DEV</h1>
+    <x-typo.article-wrapper>
+        <x-typo.section>
+            <x-typo.title>About DEV</x-typo.title>
             <p>DEV is a community of software developers getting together to help one another out. The software industry
                 relies on collaboration and networked learning. We provide a place for that to happen.</p>
             <p>DEV is built on <x-link.a href="https://forem.com/" class="underline">Forem</x-link.a>: open source
@@ -15,20 +15,20 @@
             </p>
             <p>We believe in transparency and adding value to the ecosystem. We hope you enjoy poking around and
                 participating!</p>
-        </section>
-        <section class="space-y-6">
-            <h2 class="text-3xl font-extrabold">Leadership</h2>
+        </x-typo.section>
+        <x-typo.section>
+            <x-typo.sub-heading>Leadership</x-typo.sub-heading>
             <img src="{{ asset('images/about/leadership.jfif') }}" alt="dev.to leadership" class="rounded-lg">
             <p>DEV is led by Forem's co-founders <x-link.a href="#" class="underline">Ben Halpern</x-link.a>, <x-link.a
                     href="#" class="underline">Jess Lee</x-link.a>, and <x-link.a href="#" class="underline">Peter Frank
                 </x-link.a> ("PB&J").</p>
-        </section>
-        <section class="space-y-6">
-            <h2 class="text-3xl font-extrabold">Team</h2>
+        </x-typo.section>
+        <x-typo.section>
+            <x-typo.sub-heading>Team</x-typo.sub-heading>
             <img src="{{ asset('images/about/team.jfif') }}" alt="dev.to team" class="rounded-lg">
             <p>Our team is distributed around the world. We have no office, but we come together online each day to
                 build community and improve the software careers of millions.</p>
             <p>Happy coding ❤️</p>
-        </section>
-    </x-article-wrapper>
+        </x-typo.section>
+    </x-typo.article-wrapper>
 </x-app-layout>

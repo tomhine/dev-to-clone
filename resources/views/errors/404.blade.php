@@ -18,7 +18,7 @@
 <body class="bg-white w-screen h-screen flex items-center justify-center">
     <div class="space-y-4">
         <div class="p-[25px] rounded-3xl bg-[#36377c] h-[350px] w-[350px]">
-            <img src="https://i.imgur.com/AdvTDlI.jpg" alt="404 page not found" class="rounded-3xl">
+            <img src="{{ asset('images/404.jpeg') }}" alt="404 page not found" class="rounded-3xl">
         </div>
         <div class="text-xl text-center">
             <p class="mb-4">This page does not exist</p>
