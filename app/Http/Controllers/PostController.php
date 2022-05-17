@@ -44,7 +44,7 @@ class PostController extends Controller
      */
     public function search(Request $request)
     {
-        $search = $request->input('search');
+        $search = trim($request->input('search'));
 
         // $posts = Post::with(['author:id,name', 'bookmarks'])->latest()->get();
         $posts = Post::query()->where('title', 'LIKE', "%{$search}%")->with(['author:id,name', 'bookmarks'])->get();
