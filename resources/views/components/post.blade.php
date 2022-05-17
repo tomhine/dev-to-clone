@@ -28,7 +28,7 @@
             @if (count($post->tags) > 0)
             <ul class="flex flex-wrap items-center gap-2 text-sm">
                 @foreach ($post->tags as $tag)
-                <li>#{{ $tag }}</li>
+                <x-tag :tag="$tag" />
                 @endforeach
             </ul>
             @endif

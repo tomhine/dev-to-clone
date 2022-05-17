@@ -31,15 +31,15 @@ class PostFactory extends Factory
     }
 
     /**
-     * Get a comma seperated list of tags
+     * Get a comma seperated string of tags
      *
      * @param integer $minTags minimum amount of tags inclusive
      * @param integer $maxTags maximum amount of tags inclusive
-     * @return string comma seperated list of tags
+     * @return string comma seperated string of tags
      */
     private function getRandomTags(int $minTags = 1, int $maxTags = 4): string
     {
-        $words = ['javascript', 'php', 'backend', 'frontend', 'html', 'css', 'tailwind', 'database', 'mysql', 'server', 'sqlite', 'vue', 'laravel', 'react', 'postgresql', 'supabase', 'solidjs', 'python'];
+        $words = ['javascript', 'laravel', 'php', 'webdev', 'python', 'html', 'css', 'tailwind', 'sql', 'vue', 'react', 'postgresql', 'supabase'];
 
         $nbLoops = rand($minTags, $maxTags);
 

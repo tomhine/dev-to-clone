@@ -24,7 +24,7 @@
                     <h2 class="text-4xl font-bold">{{ $post->title }}</h2>
                     <ul class="flex items-center gap-2 text-sm mt-2">
                         @foreach ($post->tags as $tag)
-                        <li>#{{ $tag }}</li>
+                        <x-tag :tag="$tag" />
                         @endforeach
                     </ul>
                 </div>
