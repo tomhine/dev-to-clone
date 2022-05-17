@@ -1051,6 +1051,9 @@ select {
 .ml-6 {
   margin-left: 1.5rem;
 }
+.-mt-5 {
+  margin-top: -1.25rem;
+}
 .block {
   display: block;
 }
@@ -1104,6 +1107,12 @@ select {
 }
 .max-h-6 {
   max-height: 1.5rem;
+}
+.max-h-\[400px\] {
+  max-height: 400px;
+}
+.max-h-\[42vh\] {
+  max-height: 42vh;
 }
 .min-h-\[50vh\] {
   min-height: 50vh;
@@ -1320,6 +1329,9 @@ select {
 .overflow-hidden {
   overflow: hidden;
 }
+.overflow-y-auto {
+  overflow-y: auto;
+}
 .overflow-x-scroll {
   overflow-x: scroll;
 }
@@ -1480,6 +1492,9 @@ select {
 .bg-gray-800\/10 {
   background-color: rgb(31 41 55 / 0.1);
 }
+.bg-\[\#090909\]\/50 {
+  background-color: rgb(9 9 9 / 0.5);
+}
 .object-fill {
   -o-object-fit: fill;
      object-fit: fill;
@@ -1510,6 +1525,9 @@ select {
 }
 .p-\[25px\] {
   padding: 25px;
+}
+.p-3 {
+  padding: 0.75rem;
 }
 .px-4 {
   padding-left: 1rem;
@@ -1610,6 +1628,9 @@ select {
 }
 .pr-4 {
   padding-right: 1rem;
+}
+.pb-4 {
+  padding-bottom: 1rem;
 }
 .text-center {
   text-align: center;
@@ -2638,6 +2659,10 @@ select {
     margin-top: 2rem;
   }
 
+  .md\:mt-0 {
+    margin-top: 0px;
+  }
+
   .md\:block {
     display: block;
   }
@@ -2718,6 +2743,11 @@ select {
   .md\:px-2 {
     padding-left: 0.5rem;
     padding-right: 0.5rem;
+  }
+
+  .md\:py-8 {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
   }
 
   .md\:pt-8 {

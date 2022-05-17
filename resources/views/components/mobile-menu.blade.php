@@ -1,4 +1,4 @@
-<div class="mobile-menu fixed hidden md:hidden z-30 bg-white h-full min-h-screen w-[300px] overflow-y-scroll"
+<div class="mobile-menu fixed hidden md:hidden z-30 bg-white h-full min-h-screen w-[300px] space-y-4 overflow-y-scroll"
     data-mobile-menu-sidedraw>
     <header class="w-full h-14 bg-white flex items-center justify-between pl-4 pr-2 mb-1">
         <h2 class="text-lg font-bold">DEV Community</h2>
@@ -14,5 +14,5 @@
 
     <x-nav.other />
 
-    <x-social-links />
+    <x-social-links class="pb-4" />
 </div>

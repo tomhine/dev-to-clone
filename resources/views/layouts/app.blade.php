@@ -25,7 +25,7 @@
 
 <body class="font-sans antialiased bg-neutral-100 text-gray-800">
     <!-- Backdrop -->
-    <div class="hidden md:hidden absolute left-0 top-0 w-full h-full bg-black/50" data-backdrop></div>
+    <div class="hidden md:hidden absolute left-0 top-0 w-screen h-screen bg-[#090909]/50" data-backdrop></div>
 
     <!-- Mobile menu -->
     <x-mobile-menu />

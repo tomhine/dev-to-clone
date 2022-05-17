@@ -1,5 +1,5 @@
 <x-app-layout>
-    <article class="w-full max-w-5xl mx-auto bg-white rounded-md border px-16 py-8 space-y-8 text-xl">
+    <x-article-wrapper>
         <section class="space-y-6">
             <h1 class="text-5xl font-extrabold">About DEV</h1>
             <p>DEV is a community of software developers getting together to help one another out. The software industry
@@ -30,5 +30,5 @@
                 build community and improve the software careers of millions.</p>
             <p>Happy coding ❤️</p>
         </section>
-    </article>
+    </x-article-wrapper>
 </x-app-layout>

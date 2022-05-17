@@ -1,5 +1,5 @@
 <x-app-layout>
-    <article class="w-full max-w-5xl mx-auto bg-white rounded-md border px-16 py-8 space-y-8 text-xl mb-36">
+    <x-article-wrapper class="mb-36">
         <section class="space-y-6">
             <h1 class="text-5xl font-extrabold">Contacts</h1>
             <p>DEV Community would love to hear from you!</p>
@@ -12,5 +12,5 @@
             <p>To request a feature, please <x-link.a href="#" class="underline">start a new GitHub Discussion
                 </x-link.a> in the Forem repo!</p>
         </section>
-    </article>
+    </x-article-wrapper>
 </x-app-layout>

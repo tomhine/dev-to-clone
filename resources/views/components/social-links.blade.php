@@ -1,4 +1,4 @@
-<div>
+<div {{ $attributes }}>
     <ul class="flex items-center w-5/6 md:w-full justify-between text-neutral-700">
         <x-link.button-hover class="px-2">
             <x-icon.social.twitter />

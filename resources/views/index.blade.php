@@ -15,6 +15,17 @@ $speakers = ['Angie Jones', 'Kelsey Hightower', 'Tracy Chou'];
             <x-nav.other />
 
             <x-social-links />
+
+            <x-tags-list class="pb-4" />
+            <!-- End of navigation -->
+
+            <x-side-card class="text-gray-700">
+                <img src="{{ asset('images/aside/wasm.png') }}" alt="" class="rounded-md" aria-hidden>
+                <div>
+                    <strong class="font-bold text-brand-purple">Immerse yourself in the WebAssembly ecosystem
+                        ✅</strong>
+                </div>
+            </x-side-card>
         </aside>
         <!-- post feed -->
         <div class="lg:max-w-2xl w-full md:w-2/3 lg:w-1/2 flex flex-col gap-2">
