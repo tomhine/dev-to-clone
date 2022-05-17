@@ -1162,6 +1162,9 @@ select {
 .w-48 {
   width: 12rem;
 }
+.w-5\/6 {
+  width: 83.333333%;
+}
 .max-w-7xl {
   max-width: 80rem;
 }
@@ -2362,6 +2365,10 @@ select {
     display: none;
   }
 
+  .sm\:w-full {
+    width: 100%;
+  }
+
   .sm\:max-w-md {
     max-width: 28rem;
   }
@@ -2653,6 +2660,10 @@ select {
 
   .md\:w-2\/3 {
     width: 66.666667%;
+  }
+
+  .md\:w-full {
+    width: 100%;
   }
 
   .md\:gap-2 {

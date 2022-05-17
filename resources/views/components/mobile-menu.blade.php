@@ -11,4 +11,8 @@
     @endguest
     <!-- Start of navigation -->
     <x-nav.main />
+
+    <x-nav.other />
+
+    <x-social-links />
 </div>
