@@ -19,7 +19,7 @@ class LikeButton extends Component
         $this->count = $post->likes_count;
 
         if (Auth::user()) {
-            $this->currentUserHasLiked = Like::query()->where('user_id', '=', Auth::user()->id)->where('post_id', '=', $this->post->id)->exists();
+            $this->currentUserHasLiked = Auth::user()->likes->contains('id', $post->id);
         }
     }
 

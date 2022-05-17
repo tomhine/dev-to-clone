@@ -11,7 +11,7 @@ $tags = ['javascript', 'laravel', 'php', 'webdev', 'python', 'html', 'css', 'tai
         Popular Tags
         @endauth
     </h2>
-    <ul class="max-h-[42vh] overflow-y-auto">
+    <ul class="max-h-[405px] overflow-y-auto">
         @foreach ($tags as $tag)
         <li>
             <x-link.button-hover>

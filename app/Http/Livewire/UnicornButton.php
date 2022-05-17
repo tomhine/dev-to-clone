@@ -19,7 +19,7 @@ class UnicornButton extends Component
         $this->count = $post->unicorns_count;
 
         if (Auth::user()) {
-            $this->currentUserHasUnicorned = Unicorn::query()->where('user_id', '=', Auth::user()->id)->where('post_id', '=', $this->post->id)->exists();
+            $this->currentUserHasUnicorned = Auth::user()->unicorns->contains('id', $post->id);
         }
     }
 
