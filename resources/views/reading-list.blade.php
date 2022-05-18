@@ -10,12 +10,12 @@
                 @foreach ($bookmarks as $bookmark)
                 <div class="flex gap-4">
                     <img src="{{ $bookmark->user->profile_image ? asset("
-                        images/avatars/{$bookmark->user->profile_image}")
+                        images/avatars/{$bookmark->post->author->profile_image}")
                     : asset('images/avatar.png') }}" alt="author profile avatar" class="rounded-full h-8 w-8">
                     <div>
                         <h2 class="text-lg font-bold">{{ $bookmark->post->title }}</h2>
                         <div class="text-sm flex items-center gap-2">
-                            <p class="font-medium">{{ $bookmark->user->name }}</p>
+                            <p class="font-medium">{{ $bookmark->post->author->name }}</p>
                             <time class="text-neutral-500/80">
                                 •
                                 {{ $bookmark->post->created_at->format('F d') }}

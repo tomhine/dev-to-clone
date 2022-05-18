@@ -53,7 +53,7 @@
                     <div class="pt-2">
                         <x-link.button-hover href="{{ route('dashboard') }}">Dashboard</x-link.button-hover>
                         <x-link.button-hover href="{{ route('posts.create') }}">Create Post</x-link.button-hover>
-                        <x-link.button-hover href="#">Reading list</x-link.button-hover>
+                        <x-link.button-hover href="{{ route('bookmarks.index') }}">Reading list</x-link.button-hover>
                         <x-link.button-hover href="#">Settings</x-link.button-hover>
                     </div>
                     <div class="pt-2">
