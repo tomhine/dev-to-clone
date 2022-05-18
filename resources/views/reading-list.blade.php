@@ -36,11 +36,12 @@
                 @endforeach
 
                 @else
-                <div class="w-full p-16 border rounded-md bg-white">
+                <div class="w-full p-16 rounded-md bg-white text-center">
                     <h3 class="text-lg font-bold">Your reading list is empty</h3>
-                    <p class="text-center">Click the bookmark reaction
-                        <x-icon.bookmark /> when viewing a post to add it to your reading
-                        list./p>
+                    <p class="text-neutral-500">Click the bookmark reaction
+                        <x-icon.bookmark class="inline" /> when viewing a post to add it to your reading
+                        list.
+                    </p>
                 </div>
                 @endif
             </div>
