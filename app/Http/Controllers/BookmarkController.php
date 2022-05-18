@@ -16,7 +16,9 @@ class BookmarkController extends Controller
     public function index()
     {
         return view('reading-list', [
-            'bookmarks' => Bookmark::with(['post', 'user'])->where('user_id', Auth::user()->id)->get()
+            'bookmarks' => Bookmark::with(['post' => function ($query) {
+                $query->with('author:id,name,profile_image');
+            }, 'user:id,name'])->where('user_id', Auth::user()->id)->get()
         ]);
     }
 }
