@@ -39,7 +39,7 @@
 
     <!-- Page content -->
     <main
-        class="flex flex-col items-center gap-4 py-4 md:px-4 {{ Request::route()->getName() !== 'posts.create' ? 'mt-14' : '-mt-4' }}"
+        class="flex flex-col items-center gap-4 py-4 md:px-4 min-h-[50vh] {{ Request::route()->getName() !== 'posts.create' ? 'mt-14' : '-mt-4' }}"
         data-page-main>
         {{ $slot }}
     </main>
