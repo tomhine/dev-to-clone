@@ -41,7 +41,7 @@ class PostForm extends Component
     public function updatedContent()
     {
         $this->validate([
-            'tags' => 'required',
+            'content' => 'required',
         ]);
     }
 
