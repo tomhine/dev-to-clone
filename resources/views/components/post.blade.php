@@ -5,7 +5,7 @@
     @if ($bannerImage && $post->banner_image_url)
     <!-- Banner image -->
     <a href="/posts/{{ $post->slug }}">
-        <img src="{{ asset('images/banners/' . $post->banner_image_url) }}" alt="" aria-hidden class="md:rounded-t-md">
+        <img src="{{ asset($post->banner_image_url) }}" alt="" aria-hidden class="md:rounded-t-md">
     </a>
     @endif
     <div class="px-6 py-4 flex flex-col gap-2">

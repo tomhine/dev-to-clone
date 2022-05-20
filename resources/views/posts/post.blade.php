@@ -9,7 +9,7 @@
         </div>
         <article class="bg-white rounded-xl border w-full max-w-3xl flex flex-col">
             @if ($post->banner_image_url)
-            <img src="{{ asset('images/banners/' . $post->banner_image_url) }}" alt="" aria-hidden class="rounded-t-md">
+            <img src="{{ asset($post->banner_image_url) }}" alt="" aria-hidden class="rounded-t-md">
             @endif
             <section class="pl-16 pr-12 py-8 flex flex-col gap-4">
                 <div class="flex items-center gap-4">
