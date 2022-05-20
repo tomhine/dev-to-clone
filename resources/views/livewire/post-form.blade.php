@@ -19,7 +19,11 @@
                 <label for="banner_image"
                     class="ring-2 ring-gray-300 active:ring-gray-400 shadow active:shadow-md active:bg-gray-100 px-4 py-2 rounded-md cursor-pointer"
                     data-banner-image-upload-label>
+                    @if($bannerImage)
+                    Change image
+                    @else
                     Add a cover image
+                    @endif
                     <input type="file" name="banner_image" id="banner_image" wire:model="bannerImage"
                         class="absolute -left-[10000px] overflow-hidden h-1 w-1" data-banner-image-upload-input>
                 </label>
