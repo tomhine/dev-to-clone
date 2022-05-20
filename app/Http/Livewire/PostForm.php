@@ -24,27 +24,6 @@ class PostForm extends Component
         ]);
     }
 
-    public function updatedTitle()
-    {
-        $this->validate([
-            'title' => 'required|max:255',
-        ]);
-    }
-
-    public function updatedTags()
-    {
-        $this->validate([
-            'tags' => ['regex:/[A-Za-z,]+/', 'max:255'],
-        ]);
-    }
-
-    public function updatedContent()
-    {
-        $this->validate([
-            'content' => 'required',
-        ]);
-    }
-
     public function removeBannerImage()
     {
         $this->bannerImage = null;
@@ -52,6 +31,12 @@ class PostForm extends Component
 
     public function submitForm()
     {
+        $this->validate([
+            'title' => 'required|max:255',
+            'tags' => ['regex:/[A-Za-z,]+/', 'max:255'],
+            'content' => 'required',
+        ]);
+
         $post = new Post();
         $post->title = $this->title;
         $post->slug = Str::slug($this->title);
