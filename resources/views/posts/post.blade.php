@@ -35,7 +35,7 @@
         </article>
         <aside class="relative hidden lg:block w-full lg:max-w-[280px] xl:max-w-[345px]">
             <x-side-card
-                class="border-t-[32px] border-t-gray-900 max-w-[260px] xl:max-w-[345px] fixed top-[73px] gap-6">
+                class="border-t-[32px] border-t-gray-900 min-w-[260px] max-w-[260px] xl:max-w-[345px] fixed top-[73px] gap-6">
                 <div class="flex gap-4 -mt-8">
                     <img src="{{ $post->author->profile_image ? asset('images/avatars/' . $post->author->profile_image)
                     : asset('images/avatar.png') }}" alt="user avatar" class="h-12 w-12 rounded-full">

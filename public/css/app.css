@@ -1174,6 +1174,12 @@ select {
 .w-48 {
   width: 12rem;
 }
+.min-w-\[200px\] {
+  min-width: 200px;
+}
+.min-w-\[260px\] {
+  min-width: 260px;
+}
 .max-w-xl {
   max-width: 36rem;
 }
@@ -1828,6 +1834,10 @@ select {
 .text-neutral-500\/80 {
   color: rgb(115 115 115 / 0.8);
 }
+.text-neutral-500 {
+  --tw-text-opacity: 1;
+  color: rgb(115 115 115 / var(--tw-text-opacity));
+}
 .text-red-600 {
   --tw-text-opacity: 1;
   color: rgb(220 38 38 / var(--tw-text-opacity));
@@ -1835,10 +1845,6 @@ select {
 .text-gray-800 {
   --tw-text-opacity: 1;
   color: rgb(31 41 55 / var(--tw-text-opacity));
-}
-.text-neutral-500 {
-  --tw-text-opacity: 1;
-  color: rgb(115 115 115 / var(--tw-text-opacity));
 }
 .text-indigo-700 {
   --tw-text-opacity: 1;
