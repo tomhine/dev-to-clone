@@ -79,33 +79,14 @@ class PostController extends Controller
     }
 
     /**
-     * Validate a created post and store in the database
+     * Delete the given blog post
      */
-    public function store(Request $request)
+    public function destroy(int $postId)
     {
-        $attributes = $request->validate([
-            'title' => ['required', 'max:255'],
-            'tags' => ['regex:/[A-Za-z,]+/', 'max:255'],
-            'content' => ['required'],
-            'banner_image' => ['image'],
-        ]);
+        $post = Post::query()->where('id', $postId)->where('author_id', Auth::user()->id);
 
-        $post = new Post();
-        $post->title = $attributes['title'];
-        $post->slug = Str::slug($attributes['title']);
-        $post->tags = $attributes['tags'];
-        $post->content = $attributes['content'];
-        $post->author_id = Auth::id();
+        $post->delete();
 
-        if ($request->hasFile('banner_image')) {
-            $image = $request->file('banner_image');
-            $filename= time() . $image->getClientOriginalName();
-            $image->move(public_path('images/banners'), $filename);
-            $post->banner_image_url = $filename;
-        }
-
-        $post->save();
-
-        return redirect(route('home'));
+        return back();
     }
 }
