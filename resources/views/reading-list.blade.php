@@ -13,7 +13,9 @@
                         images/avatars/{$bookmark->post->author->profile_image}")
                     : asset('images/avatar.png') }}" alt="author profile avatar" class="rounded-full h-8 w-8">
                     <div>
-                        <h2 class="text-lg font-bold">{{ $bookmark->post->title }}</h2>
+                        <a href="/posts/{{ $bookmark->post->slug }}">
+                            <h2 class="text-lg font-bold">{{ $bookmark->post->title }}</h2>
+                        </a>
                         <div class="text-sm flex items-center gap-2">
                             <p class="font-medium">{{ $bookmark->post->author->name }}</p>
                             <time class="text-neutral-500/80">
