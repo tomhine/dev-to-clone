@@ -36,6 +36,7 @@
                 </label>
             </div>
 
+            <!-- Forgotten password -->
             <div class="w-full flex flex-col gap-8 items-center mt-4">
                 <x-button class="w-full">
                     {{ __('Continue') }}
@@ -49,4 +50,13 @@
 
         </form>
     </x-auth-card>
+
+    <div class="flex flex-col gap-4 p-8 w-full rounded-md border border-brand-purple bg-white mx-auto max-w-xl">
+        <p class="text-brand-purple font-bold text-xl">Here's a loaner login for you to use;</p>
+        <ul>
+            <li>Email: <span class="font-bold">admin@tomhine.dev</span></li>
+            <li>Password: <span class="font-bold">password</span></li>
+        </ul>
+    </div>
+
 </x-app-layout>
