@@ -12,7 +12,7 @@ If you want to have a play with the code fork the repo and download, then use co
 composer install
 ```
 
-Then add a database, the easiest way to go is to add a sqlite database by adding a ` database.sqlite`` file to the  `database` folder;
+Then add a database, the easiest way to go is to add a sqlite database by adding a `database.sqlite` file to the  `database` folder;
 
 ```bash
 touch database/database.sqlite
