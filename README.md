@@ -6,7 +6,7 @@ Its a clone of the [dev.to blog website](https://dev.to/). It has authentication
 
 ## Setup
 
-If you want to have a play with the code fork the repo and download, then use composer to install it's dependencies;
+If you want to have a play with the code download the repo, then use composer to install it's dependencies;
 
 ```bash
 composer install
